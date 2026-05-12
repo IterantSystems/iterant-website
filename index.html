@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="KmyP26VtBDGLJhhK7RjzARb2dbj82HAcCjR4RQ7eNtM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Iterant Systems | Precision Electronics & Embedded Systems</title>
-  <meta name="description" content="Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced engineering and research applications." />
+  <meta name="description" content="Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced engineering and low-noise measurement applications." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,6 @@
 
     :root {
       --bg: #0b0f14;
-      --bg2: #121821;
       --card: #161d27;
       --border: #273142;
       --text: #f4f7fb;
@@ -79,6 +79,10 @@
       gap: 2rem;
       color: var(--muted);
       font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
     }
 
     .hero {
@@ -162,6 +166,10 @@
       background: rgba(255,255,255,0.02);
     }
 
+    .btn-secondary:hover {
+      border-color: rgba(94,162,255,0.5);
+    }
+
     .hero-card {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.06);
@@ -230,7 +238,6 @@
       font-size: 1.15rem;
     }
 
-    .card p,
     .card li {
       color: var(--muted);
       font-size: 0.96rem;
@@ -241,21 +248,6 @@
       padding-left: 1rem;
       display: grid;
       gap: 0.5rem;
-    }
-
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .chip {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 0.7rem 1rem;
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 0.92rem;
     }
 
     .projects {
@@ -285,6 +277,21 @@
       padding-left: 1.2rem;
       display: grid;
       gap: 0.5rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .chip {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     .contact-box {
@@ -328,6 +335,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -354,7 +362,7 @@
         <h1>Hardware,<br>Evolved.</h1>
 
         <p>
-          Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced research and next-generation engineering applications.
+          Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced engineering and low-noise measurement applications.
         </p>
 
         <div class="hero-buttons">
@@ -363,215 +371,197 @@
         </div>
       </div>
 
-<section class="hero">
-  <div class="container hero-grid">
+      <div class="hero-card">
+        <h3>Core Technical Areas</h3>
 
-    <div>
-      <div class="eyebrow">Advanced Electronics & Embedded Systems</div>
-
-      <h1>Hardware,<br>Evolved.</h1>
-
-      <p>
-        Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced engineering and low-noise measurement applications.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="https://github.com/IterantSystems" target="_blank" class="btn btn-secondary">GitHub Organization</a>
-      </div>
-    </div>
-
-    <div class="hero-card">
-      <h3>Core Technical Areas</h3>
-
-      <ul>
-        <li>Precision Analog Electronics</li>
-        <li>High-Speed Multi-Layer PCB Design</li>
-        <li>Embedded Linux & Microcontroller Platforms</li>
-        <li>Scientific Instrumentation Systems</li>
-        <li>High-Speed Interface Electronics</li>
-        <li>Mixed-Signal System Integration</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<section id="expertise">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Engineering Expertise</h2>
-      <p>
-        Iterant Systems focuses on advanced hardware development spanning precision analog electronics, embedded control systems, high-speed digital integration, low-noise instrumentation, and full hardware bring-up workflows.
-      </p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>PCB Design & Layout</h3>
         <ul>
-          <li>KiCad & Altium Designer</li>
-          <li>8-layer high-speed PCB design</li>
-          <li>Controlled impedance routing</li>
-          <li>Differential pair routing</li>
-          <li>Signal integrity aware layouts</li>
-          <li>EMI / EMC-aware design practices</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Embedded Systems</h3>
-        <ul>
-          <li>Embedded C/C++</li>
-          <li>Python-based automation</li>
-          <li>Teensy platforms</li>
-          <li>Raspberry Pi CM5</li>
-          <li>NanoPi systems</li>
-          <li>RP2040 / Raspberry Pi Pico</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Scientific Instrumentation</h3>
-        <ul>
-          <li>Precision instrumentation electronics</li>
-          <li>SiPM / MPPC systems</li>
-          <li>Precision current supplies</li>
-          <li>Leakage current monitoring</li>
-          <li>Low-noise instrumentation</li>
-          <li>Remote instrumentation platforms</li>
+          <li>Precision Analog Electronics</li>
+          <li>High-Speed Multi-Layer PCB Design</li>
+          <li>Embedded Linux & Microcontroller Platforms</li>
+          <li>Scientific Instrumentation Systems</li>
+          <li>High-Speed Interface Electronics</li>
+          <li>Mixed-Signal System Integration</li>
         </ul>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="projects">
-  <div class="container">
+  <section id="expertise">
+    <div class="container">
 
-    <div class="section-title">
-      <h2>Featured Projects</h2>
-      <p>
-        Representative hardware systems and electronics platforms developed for scientific instrumentation, embedded control systems, and advanced measurement applications.
-      </p>
-    </div>
-
-    <div class="projects">
-
-      <div class="project">
-        <h3>Ultra-Stable Precision Current Platforms</h3>
+      <div class="section-title">
+        <h2>Engineering Expertise</h2>
         <p>
-          Ultra-stable precision current platforms engineered for low-noise scientific instrumentation, precision magnetic systems, and advanced experimental environments.
+          Iterant Systems focuses on advanced hardware development spanning precision analog electronics, embedded control systems, high-speed digital integration, low-noise instrumentation, and full hardware bring-up workflows.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>PCB Design & Layout</h3>
+          <ul>
+            <li>KiCad & Altium Designer</li>
+            <li>8-layer high-speed PCB design</li>
+            <li>Controlled impedance routing</li>
+            <li>Differential pair routing</li>
+            <li>Signal integrity aware layouts</li>
+            <li>EMI / EMC-aware design practices</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Embedded Systems</h3>
+          <ul>
+            <li>Embedded C/C++</li>
+            <li>Python-based automation</li>
+            <li>Teensy platforms</li>
+            <li>Raspberry Pi CM5</li>
+            <li>NanoPi systems</li>
+            <li>RP2040 / Raspberry Pi Pico</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Scientific Instrumentation</h3>
+          <ul>
+            <li>Precision instrumentation electronics</li>
+            <li>SiPM / MPPC systems</li>
+            <li>Precision current supplies</li>
+            <li>Leakage current monitoring</li>
+            <li>Low-noise instrumentation</li>
+            <li>Remote instrumentation platforms</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+        <p>
+          Representative hardware systems and electronics platforms developed for scientific instrumentation, embedded control systems, and advanced measurement applications.
+        </p>
+      </div>
+
+      <div class="projects">
+
+        <div class="project">
+          <h3>Ultra-Stable Precision Current Platforms</h3>
+          <p>
+            Ultra-stable precision current platforms engineered for low-noise scientific instrumentation, precision magnetic systems, and advanced experimental environments.
+          </p>
+
+          <ul>
+            <li>64-channel shim current supply architecture</li>
+            <li>Sub-ppm precision current systems</li>
+            <li>Precision DAC and instrumentation amplifier design</li>
+            <li>High-current degaussing electronics</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>Embedded Imaging & Camera-Control Electronics</h3>
+          <p>
+            Advanced embedded imaging and camera-control electronics platforms integrating CM5 systems, Teensy controllers, PoE infrastructure, environmental sensing, and remote instrumentation capabilities.
+          </p>
+
+          <ul>
+            <li>CM5-based imaging systems</li>
+            <li>Teensy supervisory controllers</li>
+            <li>PoE-powered instrumentation</li>
+            <li>Environmental sensing and power-path management</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>High-Speed Interface Electronics</h3>
+          <p>
+            Custom high-speed interface and readout electronics involving high-density interconnect systems, differential signaling architectures, and mixed-signal integration.
+          </p>
+
+          <ul>
+            <li>lpGBT-compatible routing architectures</li>
+            <li>Multi-layer high-speed PCB systems</li>
+            <li>Differential signaling infrastructure</li>
+            <li>High-density interface integration</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>High-Voltage Leakage Current Monitoring</h3>
+          <p>
+            High-voltage instrumentation electronics designed for picoamp-level leakage-current monitoring in low-noise, precision measurement environments.
+          </p>
+
+          <ul>
+            <li>Low-noise analog front-end design</li>
+            <li>High-voltage compatible measurement systems</li>
+            <li>Precision current sensing electronics</li>
+            <li>Remote monitoring integration</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Technologies</h2>
+        <p>
+          Development tools, embedded platforms, and engineering workflows utilized across hardware development and instrumentation projects.
+        </p>
+      </div>
+
+      <div class="tech-stack">
+        <div class="chip">KiCad</div>
+        <div class="chip">Altium Designer</div>
+        <div class="chip">LTspice</div>
+        <div class="chip">Embedded C/C++</div>
+        <div class="chip">Python</div>
+        <div class="chip">Linux</div>
+        <div class="chip">Git / GitHub</div>
+        <div class="chip">Raspberry Pi CM5</div>
+        <div class="chip">NanoPi</div>
+        <div class="chip">Teensy</div>
+        <div class="chip">RP2040</div>
+        <div class="chip">Ethernet & PoE</div>
+        <div class="chip">High-Speed PCB Design</div>
+        <div class="chip">Signal Integrity</div>
+        <div class="chip">Scientific Instrumentation</div>
+        <div class="chip">PCB Manufacturing, Assembly & Validation</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+        <h2>Get In Touch</h2>
+
+        <p>
+          Interested in precision electronics, embedded instrumentation systems, or advanced hardware development collaboration?
         </p>
 
-        <ul>
-          <li>64-channel shim current supply architecture</li>
-          <li>Sub-ppm precision current systems</li>
-          <li>Precision DAC and instrumentation amplifier design</li>
-          <li>High-current degaussing electronics</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>Embedded Imaging & Camera-Control Electronics</h3>
-        <p>
-          Advanced embedded imaging and camera-control electronics platforms integrating CM5 systems, Teensy controllers, PoE infrastructure, environmental sensing, and remote instrumentation capabilities.
-        </p>
-
-        <ul>
-          <li>CM5-based imaging systems</li>
-          <li>Teensy supervisory controllers</li>
-          <li>PoE-powered instrumentation</li>
-          <li>Environmental sensing and power-path management</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>High-Speed Interface Electronics</h3>
-        <p>
-          Custom high-speed interface and readout electronics involving high-density interconnect systems, differential signaling architectures, and mixed-signal integration.
-        </p>
-
-        <ul>
-          <li>lpGBT-compatible routing architectures</li>
-          <li>Multi-layer high-speed PCB systems</li>
-          <li>Differential signaling infrastructure</li>
-          <li>High-density interface integration</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>High-Voltage Leakage Current Monitoring</h3>
-        <p>
-          High-voltage instrumentation electronics designed for picoamp-level leakage-current monitoring in low-noise, precision measurement environments.
-        </p>
-
-        <ul>
-          <li>Low-noise analog front-end design</li>
-          <li>High-voltage compatible measurement systems</li>
-          <li>Precision current sensing electronics</li>
-          <li>Remote monitoring integration</li>
-        </ul>
+        <div class="hero-buttons" style="justify-content:center;">
+          <a href="mailto:shomi74@gmail.com" class="btn btn-primary">Contact</a>
+          <a href="https://github.com/IterantSystems" target="_blank" class="btn btn-secondary">GitHub</a>
+        </div>
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section id="technologies">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Technologies</h2>
-      <p>
-        Development tools, embedded platforms, and engineering workflows utilized across hardware development and instrumentation projects.
-      </p>
-    </div>
-
-    <div class="tech-stack">
-      <div class="chip">KiCad</div>
-      <div class="chip">Altium Designer</div>
-      <div class="chip">LTspice</div>
-      <div class="chip">Embedded C/C++</div>
-      <div class="chip">Python</div>
-      <div class="chip">Linux</div>
-      <div class="chip">Git / GitHub</div>
-      <div class="chip">Raspberry Pi CM5</div>
-      <div class="chip">NanoPi</div>
-      <div class="chip">Teensy</div>
-      <div class="chip">RP2040</div>
-      <div class="chip">Ethernet & PoE</div>
-      <div class="chip">High-Speed PCB Design</div>
-      <div class="chip">Signal Integrity</div>
-      <div class="chip">Scientific Instrumentation</div>
-      <div class="chip">PCB Manufacturing, Assembly & Validation</div>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-
-    <div class="contact-box">
-      <h2>Get In Touch</h2>
-
-      <p>
-        Interested in precision electronics, embedded instrumentation systems, or advanced hardware development collaboration?
-      </p>
-
-      <div class="hero-buttons" style="justify-content:center;">
-        <a href="mailto:shomi74@gmail.com" class="btn btn-primary">Contact</a>
-        <a href="https://github.com/IterantSystems" target="_blank" class="btn btn-secondary">GitHub</a>
-      </div>
-    </div>
-
-  </div>
-</section>
   <footer>
     <div class="container">
       © 2026 Iterant Systems — Ottawa, Ontario, Canada
