@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iterant Systems</title>
+  <meta name="description" content="Precision electronics, embedded systems, and scientific instrumentation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0b0f14;
+      --bg2: #121821;
+      --card: #161d27;
+      --border: #273142;
+      --text: #f4f7fb;
+      --muted: #9ca8ba;
+      --accent: #5ea2ff;
+      --accent2: #77ffd8;
+      --max-width: 1200px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #0b0f14, #101720);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(14px);
+      background: rgba(11, 15, 20, 0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 0;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(94,162,255,0.18), transparent 70%);
+      top: -200px;
+      right: -150px;
+      z-index: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--accent2);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.95rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.25s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #347eff);
+      color: white;
+      box-shadow: 0 10px 25px rgba(52,126,255,0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 24px;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .hero-card li {
+      color: var(--muted);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding-bottom: 0.8rem;
+    }
+
+    section {
+      padding: 5.5rem 0;
+    }
+
+    .section-title {
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 750px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.8rem;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(94,162,255,0.4);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .card ul {
+      margin-top: 1rem;
+      padding-left: 1rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .chip {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .projects {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .project {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+    }
+
+    .project h3 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .project p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .project ul {
+      color: var(--muted);
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(94,162,255,0.12), rgba(119,255,216,0.08));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Iterant<span>Systems</span></div>
+
+        <div class="nav-links">
+          <a href="#expertise">Expertise</a>
+          <a href="#projects">Projects</a>
+          <a href="#technologies">Technologies</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">Advanced Electronics & Embedded Systems</div>
+
+        <h1>Hardware,<br>Evolved.</h1>
+
+        <p>
+          Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced research and next-generation engineering applications.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://github.com/IterantSystems" target="_blank" class="btn btn-secondary">GitHub Organization</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Core Technical Areas</h3>
+
+        <ul>
+          <li>Precision Analog Electronics</li>
+          <li>High-Speed Multi-Layer PCB Design</li>
+          <li>Embedded Linux & Microcontroller Platforms</li>
+          <li>Scientific Instrumentation Systems</li>
+          <li>Detector Readout Electronics</li>
+          <li>Mixed-Signal System Integration</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Engineering Expertise</h2>
+        <p>
+          Iterant Systems focuses on advanced hardware development spanning precision analog design, embedded control systems, detector electronics, high-speed digital integration, and full hardware bring-up workflows.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>PCB Design & Layout</h3>
+          <ul>
+            <li>KiCad & Altium Designer</li>
+            <li>8-layer high-speed PCB design</li>
+            <li>Controlled impedance routing</li>
+            <li>Differential pair routing</li>
+            <li>Signal integrity aware layouts</li>
+            <li>EMI / EMC-aware design practices</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Embedded Systems</h3>
+          <ul>
+            <li>Embedded C/C++</li>
+            <li>Python-based automation</li>
+            <li>Teensy platforms</li>
+            <li>Raspberry Pi CM5</li>
+            <li>NanoPi systems</li>
+            <li>RP2040 / Raspberry Pi Pico</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Scientific Instrumentation</h3>
+          <ul>
+            <li>Detector electronics</li>
+            <li>SiPM / MPPC systems</li>
+            <li>Precision current supplies</li>
+            <li>Leakage current monitoring</li>
+            <li>Low-noise instrumentation</li>
+            <li>Remote instrumentation platforms</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+        <p>
+          Representative hardware systems and electronics platforms developed for scientific instrumentation, detector systems, and embedded control applications.
+        </p>
+      </div>
+
+      <div class="projects">
+
+        <div class="project">
+          <h3>TUCAN Precision Current Systems</h3>
+          <p>
+            Ultra-stable current supply systems developed for neutron EDM experiments requiring high precision, low-noise operation, and long-term stability.
+          </p>
+
+          <ul>
+            <li>64-channel shim current supply architecture</li>
+            <li>Sub-ppm B0 coil current systems</li>
+            <li>Precision DAC and instrumentation amplifier design</li>
+            <li>High-current degaussing electronics</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>Hyper-K / IWCD Imaging Electronics</h3>
+          <p>
+            Embedded detector imaging and camera-control electronics platforms integrating CM5 systems, Teensy controllers, PoE operation, and remote instrumentation capabilities.
+          </p>
+
+          <ul>
+            <li>CM5-based imaging systems</li>
+            <li>Teensy supervisory controllers</li>
+            <li>PoE-powered instrumentation</li>
+            <li>Environmental sensing and power-path management</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>High-Speed Detector Electronics</h3>
+          <p>
+            Custom detector interface and readout electronics involving high-density interconnect systems, high-speed routing strategies, and mixed-signal integration.
+          </p>
+
+          <ul>
+            <li>lpGBT-compatible routing architectures</li>
+            <li>Multi-layer high-speed PCB systems</li>
+            <li>Differential signaling infrastructure</li>
+            <li>SiPM array integration platforms</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>Leakage Current Monitoring Systems</h3>
+          <p>
+            High-voltage instrumentation electronics for picoamp-level leakage current monitoring within precision physics environments.
+          </p>
+
+          <ul>
+            <li>Low-noise analog front-end design</li>
+            <li>High-voltage compatible measurement systems</li>
+            <li>Precision current sensing electronics</li>
+            <li>Remote monitoring integration</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="technologies">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Technologies</h2>
+        <p>
+          Development tools, embedded platforms, and engineering workflows utilized across hardware development and instrumentation projects.
+        </p>
+      </div>
+
+      <div class="tech-stack">
+        <div class="chip">KiCad</div>
+        <div class="chip">Altium Designer</div>
+        <div class="chip">LTspice</div>
+        <div class="chip">Embedded C/C++</div>
+        <div class="chip">Python</div>
+        <div class="chip">Linux</div>
+        <div class="chip">Git / GitHub</div>
+        <div class="chip">Raspberry Pi CM5</div>
+        <div class="chip">NanoPi</div>
+        <div class="chip">Teensy</div>
+        <div class="chip">RP2040</div>
+        <div class="chip">Ethernet & PoE</div>
+        <div class="chip">High-Speed PCB Design</div>
+        <div class="chip">Signal Integrity</div>
+        <div class="chip">Scientific Instrumentation</div>
+        <div class="chip">PCB Manufacturing Workflows</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+        <h2>Get In Touch</h2>
+
+        <p>
+          Interested in advanced electronics development, embedded instrumentation systems, or scientific hardware collaboration?
+        </p>
+
+        <div class="hero-buttons" style="justify-content:center;">
+          <a href="mailto:shomi74@gmail.com" class="btn btn-primary">Contact</a>
+          <a href="https://github.com/IterantSystems" target="_blank" class="btn btn-secondary">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Iterant Systems — Ottawa, Ontario, Canada
+    </div>
+  </footer>
+
+</body>
+</html>
