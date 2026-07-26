@@ -5,652 +5,1255 @@
   <meta name="google-site-verification" content="KmyP26VtBDGLJhhK7RjzARb2dbj82HAcCjR4RQ7eNtM" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Iterant Systems | Precision Electronics & Embedded Systems</title>
+  <title>Iterant Systems | Embedded Systems, PCB Design & Scientific Instrumentation</title>
+  <meta
+    name="description"
+    content="Ottawa engineering partner for precision electronics, embedded systems, custom PCB design, prototype manufacturing, bring-up, validation, and scientific instrumentation."
+  />
+  <link rel="canonical" href="https://iterant.ca/" />
+  <meta name="theme-color" content="#0b0f14" />
+  <meta name="author" content="Iterant Systems" />
 
-  <meta name="description" content="Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced engineering and low-noise measurement applications." />
+  <meta property="og:title" content="Iterant Systems | Hardware from Concept to Deployment" />
+  <meta
+    property="og:description"
+    content="Precision electronics, embedded systems, custom PCBs, hardware realization, and validation for research groups, startups, and advanced product teams."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iterant.ca/" />
+  <meta property="og:site_name" content="Iterant Systems" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://iterant.ca/logo_cropped.png" />
 
-  <meta name="keywords" content="precision electronics, embedded systems, PCB design, scientific instrumentation, low-noise electronics, high-speed PCB, analog electronics, hardware development, Ottawa electronics engineering">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Iterant Systems | Hardware from Concept to Deployment" />
+  <meta
+    name="twitter:description"
+    content="Precision electronics, embedded systems, custom PCBs, prototype realization, and validation."
+  />
+  <meta name="twitter:image" content="https://iterant.ca/logo_cropped.png" />
 
-  <meta name="author" content="Iterant Systems">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
-  <meta property="og:title" content="Iterant Systems | Precision Electronics & Embedded Systems">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-  <meta property="og:description" content="Precision electronics, embedded systems, scientific instrumentation, and advanced hardware development.">
-
-  <meta property="og:type" content="website">
-
-  <meta property="og:url" content="https://iterant.ca">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="shortcut icon" href="favicon.ico">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Iterant Systems",
+    "url": "https://iterant.ca/",
+    "logo": "https://iterant.ca/logo_cropped.png",
+    "email": "iterantsystems@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ottawa",
+      "addressRegion": "Ontario",
+      "addressCountry": "CA"
+    },
+    "areaServed": "Canada",
+    "description": "Ottawa engineering partner for precision electronics, embedded systems, custom PCB design, prototype realization, validation, and scientific instrumentation.",
+    "knowsAbout": [
+      "Precision analog electronics",
+      "Embedded systems",
+      "Scientific instrumentation",
+      "Custom PCB design",
+      "Mixed-signal electronics",
+      "Prototype manufacturing",
+      "Hardware bring-up",
+      "Test automation",
+      "Industrial embedded computing"
+    ]
+  }
+  </script>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     :root {
       --bg: #0b0f14;
-      --card: #161d27;
+      --bg-soft: #101720;
+      --card: #151d27;
+      --card-soft: rgba(255, 255, 255, 0.035);
       --border: #273142;
+      --border-soft: rgba(255, 255, 255, 0.08);
       --text: #f4f7fb;
-      --muted: #9ca8ba;
+      --muted: #a5b0c1;
       --accent: #5ea2ff;
-      --accent2: #77ffd8;
+      --accent-strong: #347eff;
+      --accent-2: #77ffd8;
       --max-width: 1200px;
+      --header-height: 72px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 18px);
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #0b0f14, #101720);
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 85% 8%, rgba(94, 162, 255, 0.09), transparent 28rem),
+        linear-gradient(180deg, var(--bg), var(--bg-soft));
       color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.7;
-    }
-    html {
-      scroll-behavior: smooth;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(119, 255, 216, 0.8);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 1000;
+      transform: translateY(-180%);
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
     }
 
     .container {
-      width: 92%;
-      max-width: var(--max-width);
-      margin: auto;
+      width: min(92%, var(--max-width));
+      margin-inline: auto;
     }
 
     header {
       position: sticky;
       top: 0;
-      backdrop-filter: blur(14px);
-      background: rgba(11, 15, 20, 0.75);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
       z-index: 100;
+      min-height: var(--header-height);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+      background: rgba(11, 15, 20, 0.84);
+      backdrop-filter: blur(16px);
     }
 
     nav {
+      position: relative;
+      min-height: var(--header-height);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.4rem 0;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
     }
 
     .logo img {
-      height: 52px;
       width: auto;
+      height: 52px;
       display: block;
-      }
+    }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.55rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.93rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
       color: var(--text);
     }
 
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
+    .nav-contact {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.55rem 0.9rem;
+      color: var(--text);
     }
 
-    .hero::before {
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      width: 20px;
+      height: 2px;
+      display: block;
+      border-radius: 99px;
+      background: currentColor;
       content: "";
-      position: absolute;
-      width: 650px;
-      height: 650px;
-      background: radial-gradient(circle, rgba(94,162,255,0.18), transparent 70%);
-      top: -200px;
-      right: -150px;
-      z-index: 0;
+      transition: 0.2s ease;
+    }
+
+    .menu-toggle span {
+      margin-block: 4px;
+    }
+
+    .hero {
+      min-height: calc(88vh - var(--header-height));
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-block: 6rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 4rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
       align-items: center;
-      position: relative;
-      z-index: 1;
+      gap: clamp(2.5rem, 6vw, 5rem);
     }
 
     .eyebrow {
-      color: var(--accent2);
-      font-size: 0.9rem;
+      margin-bottom: 1.1rem;
+      color: var(--accent-2);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 1.2rem;
-      font-weight: 600;
     }
 
     h1 {
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      line-height: 1.05;
-      margin-bottom: 1.5rem;
+      max-width: 760px;
+      margin-bottom: 1.45rem;
+      font-size: clamp(3.15rem, 7vw, 5.8rem);
       font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
     }
 
-    .hero p {
+    h1 span {
+      color: var(--text);
+    }
+
+    .hero-copy {
+      max-width: 710px;
+      margin-bottom: 1.55rem;
       color: var(--muted);
-      font-size: 1.15rem;
-      max-width: 700px;
-      margin-bottom: 2rem;
+      font-size: clamp(1.02rem, 1.8vw, 1.18rem);
     }
 
-    .hero-buttons {
+    .engagement-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      color: #cbd4e2;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .engagement-note::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 16px rgba(119, 255, 216, 0.75);
+      content: "";
+    }
+
+    .button-row {
       display: flex;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .btn {
-      padding: 0.95rem 1.5rem;
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
       border-radius: 12px;
-      font-weight: 600;
-      transition: 0.25s ease;
-      display: inline-block;
+      padding: 0.85rem 1.35rem;
+      font-weight: 700;
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #347eff);
-      color: white;
-      box-shadow: 0 10px 25px rgba(52,126,255,0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 12px 28px rgba(52, 126, 255, 0.28);
+      color: #fff;
     }
 
     .btn-secondary {
       border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.018);
       color: var(--text);
-      background: rgba(255,255,255,0.02);
     }
 
     .btn-secondary:hover {
-      border-color: rgba(94,162,255,0.5);
+      border-color: rgba(94, 162, 255, 0.55);
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid var(--border-soft);
       border-radius: 24px;
-      padding: 2rem;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+      background: rgba(255, 255, 255, 0.035);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
+      padding: clamp(1.6rem, 4vw, 2.2rem);
+      backdrop-filter: blur(18px);
     }
 
-    .hero-card h3 {
+    .hero-card .card-label {
+      margin-bottom: 0.35rem;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-card h2 {
       margin-bottom: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.45rem;
     }
 
-    .hero-card ul {
-      list-style: none;
+    .ownership-list {
       display: grid;
-      gap: 0.9rem;
+      list-style: none;
     }
 
-    .hero-card li {
+    .ownership-list li {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-block: 0.83rem;
       color: var(--muted);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      padding-bottom: 0.8rem;
+    }
+
+    .ownership-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .ownership-list strong {
+      color: var(--accent-2);
+      font-size: 0.84rem;
     }
 
     section {
-      padding: 5.5rem 0;
+      padding-block: clamp(4.75rem, 8vw, 7rem);
     }
 
-    .section-title {
-      margin-bottom: 3rem;
+    .section-heading {
+      max-width: 840px;
+      margin-bottom: 2.7rem;
     }
 
-    .section-title h2 {
-      font-size: 2.3rem;
-      margin-bottom: 0.8rem;
+    .section-kicker {
+      margin-bottom: 0.65rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
-    .section-title p {
+    .section-heading h2 {
+      margin-bottom: 0.9rem;
+      font-size: clamp(2.15rem, 4.5vw, 3.25rem);
+      letter-spacing: -0.035em;
+      line-height: 1.12;
+    }
+
+    .section-heading p {
       color: var(--muted);
-      max-width: 750px;
+      font-size: 1.02rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
     }
 
     .card {
-      background: var(--card);
+      height: 100%;
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 1.8rem;
-      transition: 0.25s ease;
-    }
-
-    .workflow-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 24px;
-        margin-top: 40px;
-      }
-    
-    .workflow-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 18px;
-      padding: 28px;
-      transition: 0.3s ease;
-    }
-    
-    .workflow-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(80,180,255,0.3);
-    }
-    
-    .workflow-card h3 {
-      margin-bottom: 14px;
-      color: #ffffff;
-    }
-    
-    .workflow-card p {
-      color: #aab4c5;
-      line-height: 1.7;
+      background: var(--card);
+      padding: 1.65rem;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(94,162,255,0.4);
+      transform: translateY(-4px);
+      border-color: rgba(94, 162, 255, 0.42);
+    }
+
+    .card-number {
+      display: inline-flex;
+      min-width: 42px;
+      min-height: 28px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(119, 255, 216, 0.22);
+      border-radius: 999px;
+      color: var(--accent-2);
+      font-size: 0.74rem;
+      font-weight: 700;
     }
 
     .card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.16rem;
+      line-height: 1.35;
     }
 
-    .card li {
+    .card p {
+      margin-bottom: 0.9rem;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
-    .card ul {
-      margin-top: 1rem;
+    .feature-list {
+      display: grid;
+      gap: 0.48rem;
       padding-left: 1rem;
-      display: grid;
-      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
-    .projects {
+    .feature-list li::marker {
+      color: var(--accent);
+    }
+
+    .work-grid {
       display: grid;
+      gap: 1.3rem;
+    }
+
+    .work-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.42fr) minmax(0, 0.58fr);
       gap: 2rem;
-    }
-
-    .project {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
       border: 1px solid var(--border);
       border-radius: 24px;
-      padding: 2rem;
+      background:
+        linear-gradient(135deg, rgba(94, 162, 255, 0.04), rgba(119, 255, 216, 0.018)),
+        var(--card-soft);
+      padding: clamp(1.5rem, 4vw, 2.2rem);
     }
 
-    .project h3 {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
+    .work-card h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.45rem;
+      line-height: 1.28;
     }
 
-    .project p {
+    .work-card p {
       color: var(--muted);
-      margin-bottom: 1rem;
     }
 
-    .project ul {
+    .work-card .feature-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-content: start;
+      gap: 0.7rem 1.8rem;
+      padding-left: 1.05rem;
+    }
+
+    .discretion-note {
+      margin-top: 1.25rem;
+      border-left: 3px solid var(--accent);
       color: var(--muted);
-      padding-left: 1.2rem;
+      font-size: 0.88rem;
+      padding-left: 0.85rem;
+    }
+
+    .process-grid {
       display: grid;
-      gap: 0.5rem;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .process-card {
+      position: relative;
+      min-height: 230px;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.028);
+      padding: 1.35rem;
+    }
+
+    .process-card .step {
+      margin-bottom: 1.15rem;
+      color: var(--accent-2);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .process-card h3 {
+      margin-bottom: 0.65rem;
+      font-size: 1.05rem;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .scope-banner {
+      margin-top: 1.4rem;
+      border: 1px solid rgba(94, 162, 255, 0.22);
+      border-radius: 16px;
+      background: rgba(94, 162, 255, 0.055);
+      color: #d7e0ec;
+      padding: 1rem 1.2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .industry-card {
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.024);
+      padding: 1.4rem;
+    }
+
+    .industry-card h3 {
+      margin-bottom: 0.6rem;
+      font-size: 1.02rem;
+    }
+
+    .industry-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .about-copy {
+      color: var(--muted);
+      font-size: 1.01rem;
+    }
+
+    .about-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .credibility-list {
+      display: grid;
+      gap: 0.75rem;
+      list-style: none;
+    }
+
+    .credibility-list li {
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.026);
+      color: var(--muted);
+      padding: 0.9rem 1rem;
+    }
+
+    .credibility-list strong {
+      display: block;
+      margin-bottom: 0.12rem;
+      color: var(--text);
+      font-size: 0.94rem;
     }
 
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 0.7rem;
     }
 
     .chip {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 0.7rem 1rem;
+      border: 1px solid var(--border-soft);
       border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
       color: var(--muted);
-      font-size: 0.92rem;
+      padding: 0.65rem 0.92rem;
+      font-size: 0.88rem;
     }
 
     .contact-box {
-      background: linear-gradient(135deg, rgba(94,162,255,0.12), rgba(119,255,216,0.08));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 3rem;
+      border: 1px solid rgba(94, 162, 255, 0.18);
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(94, 162, 255, 0.13), rgba(119, 255, 216, 0.07));
+      padding: clamp(2rem, 6vw, 4rem);
       text-align: center;
     }
 
     .contact-box h2 {
-      font-size: 2.3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
+      font-size: clamp(2.1rem, 4.5vw, 3rem);
+      line-height: 1.15;
     }
 
     .contact-box p {
+      max-width: 760px;
+      margin: 0 auto 1.6rem;
+      color: #bdc8d8;
+    }
+
+    .contact-details {
+      margin-top: 1.2rem;
       color: var(--muted);
-      margin-bottom: 2rem;
+      font-size: 0.9rem;
     }
 
     footer {
-      padding: 2rem 0 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.055);
       color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      text-align: center;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
+      padding-block: 2rem 2.6rem;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem 1.5rem;
+    }
+
+    .footer-row a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 1050px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .industry-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .menu-toggle {
+        display: inline-flex;
+        flex-direction: column;
       }
 
       .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
         display: none;
+        align-items: stretch;
+        gap: 0;
+        border: 1px solid var(--border);
+        border-radius: 0 0 16px 16px;
+        background: rgba(11, 15, 20, 0.98);
+        padding: 0.65rem;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      }
+
+      .nav-links.open {
+        display: grid;
+      }
+
+      .nav-links a {
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
+      }
+
+      .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .nav-contact {
+        border: 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-block: 5.2rem;
+      }
+
+      .hero-grid,
+      .work-card,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card .feature-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .logo img {
+        height: 46px;
       }
 
       h1 {
-        font-size: 3.2rem;
+        font-size: clamp(3rem, 15vw, 4.5rem);
+      }
+
+      .grid,
+      .process-grid,
+      .industry-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row .btn {
+        width: 100%;
+      }
+
+      .footer-row {
+        display: grid;
+        justify-content: start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
     <div class="container">
-      <nav>
-        <div class="logo">
-          <img src="logo_cropped.png" alt="Iterant Systems Logo">
-        </div>
-        <div class="nav-links">
-          <a href="#expertise">Expertise</a>
-          <a href="#projects">Projects</a>
-          <a href="#technologies">Technologies</a>
-          <a href="#contact">Contact</a>
+      <nav aria-label="Primary navigation">
+        <a class="logo" href="#top" aria-label="Iterant Systems home">
+          <img src="logo_cropped.png" alt="Iterant Systems" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="site-navigation">
+          <a href="#capabilities">Capabilities</a>
+          <a href="#work">Experience</a>
+          <a href="#process">Process</a>
+          <a href="#industries">Industries</a>
+          <a href="#about">About</a>
+          <a class="nav-contact" href="#contact">Contact</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-
-      <div>
-        <div class="eyebrow">Advanced Electronics & Embedded Systems</div>
-
-        <h1>Hardware,<br>Evolved.</h1>
-
-        <p>
-          Iterant Systems develops precision electronics, embedded systems, high-speed PCB platforms, and scientific instrumentation for advanced engineering and low-noise measurement applications.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <h3>Core Technical Areas</h3>
-
-        <ul>
-          <li>Precision Analog Electronics</li>
-          <li>High-Speed Multi-Layer PCB Design</li>
-          <li>Embedded Linux & Microcontroller Platforms</li>
-          <li>Scientific Instrumentation Systems</li>
-          <li>High-Speed Interface Electronics</li>
-          <li>Mixed-Signal System Integration</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="expertise">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Engineering Expertise</h2>
-        <p>
-          Iterant Systems focuses on advanced hardware development spanning precision analog electronics, embedded control systems, high-speed digital integration, low-noise instrumentation, and full hardware bring-up workflows.
-        </p>
-      </div>
-
-      <div class="grid">
-
-        <div class="card">
-          <h3>PCB Design & Layout</h3>
-          <ul>
-            <li>KiCad & Altium Designer</li>
-            <li>8-layer high-speed PCB design</li>
-            <li>Controlled impedance routing</li>
-            <li>Differential pair routing</li>
-            <li>Signal integrity aware layouts</li>
-            <li>EMI / EMC-aware design practices</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Embedded Systems</h3>
-          <ul>
-            <li>Embedded C/C++</li>
-            <li>Python-based automation</li>
-            <li>Teensy platforms</li>
-            <li>Raspberry Pi CM5</li>
-            <li>NanoPi systems</li>
-            <li>RP2040 / Raspberry Pi Pico</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Scientific Instrumentation</h3>
-          <ul>
-            <li>Precision instrumentation electronics</li>
-            <li>SiPM / MPPC systems</li>
-            <li>Precision current supplies</li>
-            <li>Leakage current monitoring</li>
-            <li>Low-noise instrumentation</li>
-            <li>Remote instrumentation platforms</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Featured Projects</h2>
-        <p>
-          Representative hardware systems and electronics platforms developed for scientific instrumentation, embedded control systems, and advanced measurement applications.
-        </p>
-      </div>
-
-      <div class="projects">
-
-        <div class="project">
-          <h3>Ultra-Stable Precision Current Platforms</h3>
-          <p>
-            Ultra-stable precision current platforms engineered for low-noise scientific instrumentation, precision magnetic systems, and advanced experimental environments.
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Ottawa electronics & hardware engineering</div>
+          <h1>Hardware,<br /><span>Evolved.</span></h1>
+          <p class="hero-copy">
+            Iterant Systems helps research groups, startups, and advanced product teams
+            design, build, integrate, and validate electronics—from one difficult
+            subsystem to a complete deployment-ready prototype.
           </p>
-
-          <ul>
-            <li>64-channel shim current supply architecture</li>
-            <li>Sub-ppm precision current systems</li>
-            <li>Precision DAC and instrumentation amplifier design</li>
-            <li>High-current degaussing electronics</li>
-            <li>Precision current sensing and magnetic field control architectures</li>
-          </ul>
+          <div class="engagement-note">Full programs or individual work packages</div>
+          <div class="button-row">
+            <a
+              class="btn btn-primary"
+              href="mailto:iterantsystems@gmail.com?subject=Project%20inquiry%20-%20Iterant%20Systems"
+            >
+              Discuss a Project
+            </a>
+            <a class="btn btn-secondary" href="#capabilities">Explore Capabilities</a>
+          </div>
         </div>
 
-        <div class="project">
-          <h3>Embedded Imaging & Camera-Control Electronics</h3>
+        <aside class="hero-card" aria-label="Project delivery scope">
+          <div class="card-label">Flexible engagement</div>
+          <h2>What Iterant can own</h2>
+          <ol class="ownership-list">
+            <li><strong>01</strong><span>Requirements, feasibility, and system architecture</span></li>
+            <li><strong>02</strong><span>Electronics, PCB, embedded software, and integration</span></li>
+            <li><strong>03</strong><span>Sourcing, supplier selection, and manufacturing coordination</span></li>
+            <li><strong>04</strong><span>Bring-up, debugging, automated test, and validation</span></li>
+            <li><strong>05</strong><span>Deployment support, iteration, and small-batch transition</span></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Capabilities</div>
+          <h2>Engineering support across the hardware lifecycle</h2>
           <p>
-            Advanced embedded imaging and camera-control electronics platforms integrating CM5 systems, Teensy controllers, PoE infrastructure, environmental sensing, and remote instrumentation capabilities.
+            Technical depth in precision electronics and embedded systems, combined with
+            the practical coordination needed to turn designs into working hardware.
           </p>
-
-          <ul>
-            <li>CM5-based imaging systems</li>
-            <li>Teensy supervisory controllers</li>
-            <li>PoE-powered instrumentation</li>
-            <li>Environmental sensing and power-path management</li>
-            <li>Remote instrumentation and deployment integration</li>
-          </ul>
         </div>
 
-        <div class="project">
-          <h3>High-Speed Interface Electronics</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Precision Analog & Mixed-Signal Electronics</h3>
+            <p>Low-noise circuits and precision measurement platforms for demanding environments.</p>
+            <ul class="feature-list">
+              <li>Ultra-stable current and bias systems</li>
+              <li>Low-noise analog front ends</li>
+              <li>Sub-pA and precision current measurement</li>
+              <li>Sensor and detector signal conditioning</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Embedded Control & Linux Systems</h3>
+            <p>Real-time control, Linux compute, sensing, communications, and remote operation.</p>
+            <ul class="feature-list">
+              <li>Microcontroller firmware and supervisory control</li>
+              <li>Embedded Linux and compute modules</li>
+              <li>Camera, sensor, motor, and power integration</li>
+              <li>Telemetry, logging, and remote interfaces</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>High-Speed PCB & Interface Design</h3>
+            <p>Multi-layer boards and dense interfaces designed around signal integrity and manufacturability.</p>
+            <ul class="feature-list">
+              <li>Controlled impedance and differential routing</li>
+              <li>High-density interconnect and mixed-signal layout</li>
+              <li>SiPM, sensor, and high-channel-count readout</li>
+              <li>DFM review and fabrication data preparation</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">04</div>
+            <h3>Prototype Realization & PCBA Coordination</h3>
+            <p>A single engineering interface from released design files through assembled prototypes.</p>
+            <ul class="feature-list">
+              <li>BOM review, sourcing, and alternates</li>
+              <li>PCB and assembly supplier coordination</li>
+              <li>DFM/DFA issue resolution</li>
+              <li>First-article builds and small-batch transition</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">05</div>
+            <h3>Industrial Computing & Product Integration</h3>
+            <p>Selection and integration of production-proven compute platforms into deployable products.</p>
+            <ul class="feature-list">
+              <li>x86-64 and ARM64 platform evaluation</li>
+              <li>Linux, storage, networking, and security requirements</li>
+              <li>Power, enclosure, thermal, and peripheral integration</li>
+              <li>Lifecycle, warranty, supplier, and support evaluation</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-number">06</div>
+            <h3>Bring-Up, Test Automation & Validation</h3>
+            <p>Structured verification that turns assembled hardware into a characterized system.</p>
+            <ul class="feature-list">
+              <li>Power sequencing and board bring-up</li>
+              <li>Python test tools and automated data logging</li>
+              <li>Endurance, performance, and acceptance testing</li>
+              <li>Debugging, characterization, and revision planning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Representative experience</div>
+          <h2>Complex hardware, presented at capability level</h2>
           <p>
-            Custom high-speed interface and readout electronics involving high-density interconnect systems, differential signaling architectures, and mixed-signal integration.
+            Examples below reflect the engineering depth behind Iterant while keeping
+            project-specific identities, unpublished details, and collaboration-sensitive
+            information out of the public site.
           </p>
+        </div>
 
-          <ul>
-            <li>lpGBT-compatible routing architectures</li>
-            <li>Multi-layer high-speed PCB systems</li>
-            <li>Differential signaling infrastructure</li>
-            <li>High-density interface integration</li>
-            <li>Mixed-signal detector, sensor, and high-channel-count readout integration</li>
-            <li>Low-noise analog front-end and readout infrastructure</li>
+        <div class="work-grid">
+          <article class="work-card">
+            <div>
+              <h3>Precision Control & Measurement Platforms</h3>
+              <p>
+                Multi-channel, ultra-stable electronics for precision current control,
+                low-noise measurement, magnetic systems, and scientific instrumentation.
+              </p>
+            </div>
+            <ul class="feature-list">
+              <li>64-channel precision current architecture</li>
+              <li>Sub-ppm stability targets and characterization</li>
+              <li>Precision DAC and instrumentation-amplifier design</li>
+              <li>Low-current monitoring and high-current switching systems</li>
+            </ul>
+          </article>
 
+          <article class="work-card">
+            <div>
+              <h3>Embedded Imaging & Instrumentation Control</h3>
+              <p>
+                Embedded compute and real-time control for remote cameras, sensors,
+                motion systems, power paths, and unattended instrumentation.
+              </p>
+            </div>
+            <ul class="feature-list">
+              <li>Linux compute with microcontroller supervision</li>
+              <li>Camera, motor, sensor, and power integration</li>
+              <li>Ethernet/PoE and remote operation</li>
+              <li>Telemetry, battery management, and endurance testing</li>
+            </ul>
+          </article>
+
+          <article class="work-card">
+            <div>
+              <h3>Detector, Sensor & High-Density Interfaces</h3>
+              <p>
+                Mixed-signal electronics and interconnect platforms for high-channel-count
+                sensing, precision biasing, and high-speed readout.
+              </p>
+            </div>
+            <ul class="feature-list">
+              <li>SiPM/MPPC amplifier and bias platforms</li>
+              <li>Low-noise analog front ends</li>
+              <li>High-density cable and connector integration</li>
+              <li>Controlled-impedance, differential, and multi-layer PCB systems</li>
+            </ul>
+          </article>
+
+          <article class="work-card">
+            <div>
+              <h3>Automated Hardware Test & Validation Systems</h3>
+              <p>
+                Software-assisted test infrastructure for repeatable bring-up,
+                characterization, endurance testing, and engineering decisions.
+              </p>
+            </div>
+            <ul class="feature-list">
+              <li>Python control, telemetry, and structured test logs</li>
+              <li>Power-mode and battery-cycle validation</li>
+              <li>Test fixtures, acceptance criteria, and fault isolation</li>
+              <li>Data visualization and design-iteration support</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="discretion-note">
+          Specific project names, institutional affiliations, schematics, and photographs
+          are shared publicly only when permissions and IP boundaries are clear.
+        </p>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Process</div>
+          <h2>From requirements to validated hardware</h2>
+          <p>
+            A practical workflow that reduces hand-off risk between design, sourcing,
+            assembly, firmware, integration, and test.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="step">Step 01</div>
+            <h3>Define</h3>
+            <p>Requirements, interfaces, risks, environment, power, schedule, and success criteria.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">Step 02</div>
+            <h3>Design</h3>
+            <p>Architecture, schematics, simulation, PCB layout, firmware, and test planning.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">Step 03</div>
+            <h3>Realize</h3>
+            <p>BOM, sourcing, fabrication, assembly coordination, and first-article preparation.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">Step 04</div>
+            <h3>Validate</h3>
+            <p>Bring-up, debugging, automated test, characterization, and acceptance evidence.</p>
+          </article>
+          <article class="process-card">
+            <div class="step">Step 05</div>
+            <h3>Deploy & Iterate</h3>
+            <p>System integration, documentation, field feedback, revision, and small-batch support.</p>
+          </article>
+        </div>
+
+        <div class="scope-banner">
+          Engage Iterant for the complete workflow—or only the phase, subsystem, or
+          technical bottleneck that needs extra engineering capacity.
+        </div>
+      </div>
+    </section>
+
+    <section id="industries">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Who we support</div>
+          <h2>Built for teams working on difficult hardware</h2>
+        </div>
+
+        <div class="industry-grid">
+          <article class="industry-card">
+            <h3>Research & Scientific Instrumentation</h3>
+            <p>Custom electronics, controls, readout, test systems, and deployable research hardware.</p>
+          </article>
+          <article class="industry-card">
+            <h3>Hardware Startups & Product Teams</h3>
+            <p>Additional engineering capacity for architecture, prototypes, supplier execution, and validation.</p>
+          </article>
+          <article class="industry-card">
+            <h3>Industrial & Embedded Systems</h3>
+            <p>Embedded computing, automation, sensing, communications, and unattended operation.</p>
+          </article>
+          <article class="industry-card">
+            <h3>Mobility, Robotics & Assistive Technology</h3>
+            <p>Control interfaces, embedded integration, smart infrastructure, and accessibility-focused hardware.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">About</div>
+          <h2>Specialized engineering across the hardware lifecycle</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              Iterant Systems is an Ottawa-based engineering practice focused on
+              precision electronics, embedded systems, scientific instrumentation,
+              custom PCB development, hardware realization, and validation.
+            </p>
+
+            <p>
+              Iterant supports research groups, startups, and advanced product teams
+              through individual engineering work packages or complete hardware
+              development programs—from requirements and system architecture through
+              sourcing, prototype assembly, bring-up, characterization, and deployment.
+            </p>
+
+            <p>
+              The objective is to reduce development risk by connecting technical
+              design decisions with manufacturing, integration, testing, and
+              real-world deployment requirements.
+            </p>
+          </div>
+
+          <ul class="credibility-list">
+            <li>
+              <strong>Ottawa, Ontario</strong>
+              Located within Canada’s research, telecom, embedded-systems, and
+              advanced-technology ecosystem.
+            </li>
+
+            <li>
+              <strong>Flexible Engagement</strong>
+              Support for complete development programs, individual subsystems,
+              or specific technical bottlenecks.
+            </li>
+
+            <li>
+              <strong>Engineering Through Realization</strong>
+              Design decisions remain connected to sourcing, fabrication, assembly,
+              bring-up, validation, and deployment.
+            </li>
+
+            <li>
+              <strong>Research and Product Development</strong>
+              Experience supporting precision instrumentation, embedded computing,
+              sensor interfaces, automated test systems, and deployable hardware.
+            </li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="workflow">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Development Workflow</h2>
-      <p>
-        From concept exploration to deployment-ready instrumentation systems.
-      </p>
-    </div>
-
-    <div class="workflow-grid">
-
-      <div class="workflow-card">
-        <h3>Concept & Requirements</h3>
-        <p>
-          System architecture definition, interface planning, noise considerations, power budgeting, and deployment constraints.
-        </p>
-      </div>
-
-      <div class="workflow-card">
-        <h3>Electronics Development</h3>
-        <p>
-          Schematic capture, simulation, high-speed PCB layout, embedded integration, and design-for-manufacturing optimization.
-        </p>
-      </div>
-
-      <div class="workflow-card">
-        <h3>Prototype & Validation</h3>
-        <p>
-          Assembly coordination, bring-up, debugging, firmware integration, instrumentation testing, and system characterization.
-        </p>
-      </div>
-
-      <div class="workflow-card">
-        <h3>Deployment & Iteration</h3>
-        <p>
-          Iterative refinement toward stable deployment-ready hardware for research, industrial, and scientific environments.
-        </p>
+    <section id="technologies">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Tools & methods</div>
+          <h2>Technology selected to fit the system</h2>
+          <p>
+            Platforms are chosen around performance, availability, lifecycle, integration,
+            and deployment—not around a fixed vendor stack.
+          </p>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-  
-  <section id="technologies">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Technologies</h2>
-        <p>
-          Development tools, embedded platforms, and engineering workflows utilized across hardware development and instrumentation projects.
-        </p>
-      </div>
-
-      <div class="tech-stack">
-        <div class="chip">KiCad</div>
-        <div class="chip">Altium Designer</div>
-        <div class="chip">LTspice</div>
-        <div class="chip">Embedded C/C++</div>
-        <div class="chip">Python</div>
-        <div class="chip">Linux</div>
-        <div class="chip">Git / GitHub</div>
-        <div class="chip">Raspberry Pi CM5</div>
-        <div class="chip">NanoPi</div>
-        <div class="chip">Teensy</div>
-        <div class="chip">RP2040</div>
-        <div class="chip">Ethernet & PoE</div>
-        <div class="chip">High-Speed PCB Design</div>
-        <div class="chip">Signal Integrity</div>
-        <div class="chip">Scientific Instrumentation</div>
-        <div class="chip">PCB Manufacturing, Assembly & Validation</div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-
-      <div class="contact-box">
-        <h2>Get In Touch</h2>
-
-        <p>
-          Interested in precision electronics, embedded instrumentation systems, or advanced hardware development collaboration?
-        </p>
-
-        <div class="hero-buttons" style="justify-content:center;">
-          <a href="mailto:iterantsystems@gmail.com" class="btn btn-primary">Contact</a>
+        <div class="tech-stack" aria-label="Technologies and engineering methods">
+          <span class="chip">KiCad</span>
+          <span class="chip">Altium Designer</span>
+          <span class="chip">LTspice</span>
+          <span class="chip">Embedded C/C++</span>
+          <span class="chip">Python</span>
+          <span class="chip">Linux</span>
+          <span class="chip">ARM & x86 Embedded Compute</span>
+          <span class="chip">Microcontrollers & SoMs</span>
+          <span class="chip">Ethernet & PoE</span>
+          <span class="chip">USB, SPI, I²C & UART</span>
+          <span class="chip">Controlled Impedance</span>
+          <span class="chip">Signal Integrity</span>
+          <span class="chip">Precision Analog</span>
+          <span class="chip">Mixed-Signal Systems</span>
+          <span class="chip">DFM / DFA</span>
+          <span class="chip">PCBA Coordination</span>
+          <span class="chip">Automated Test & Data Logging</span>
+          <span class="chip">Bring-Up & Validation</span>
         </div>
       </div>
+    </section>
 
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Need a full hardware program—or help with one difficult subsystem?</h2>
+          <p>
+            Share the problem, current design stage, technical constraints, expected
+            deliverable, and timing. Iterant can help define the next practical engineering step.
+          </p>
+          <div class="button-row" style="justify-content: center;">
+            <a
+              class="btn btn-primary"
+              href="mailto:iterantsystems@gmail.com?subject=Project%20inquiry%20-%20Iterant%20Systems"
+            >
+              Email Iterant Systems
+            </a>
+          </div>
+          <div class="contact-details">
+            iterantsystems@gmail.com &nbsp;•&nbsp; Ottawa, Ontario, Canada
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 Iterant Systems</span>
+      <span>Precision electronics • Embedded systems • Hardware realization</span>
+      <a href="mailto:iterantsystems@gmail.com">iterantsystems@gmail.com</a>
     </div>
-  </section>
+  </footer>
 
-<footer>
-  <div class="container">
-    <p>© 2026 Iterant Systems — Ottawa, Ontario, Canada</p>
-    <p style="margin-top:8px; color:#8fa3c7;">
-      Contact: iterantsystems@gmail.com
-    </p>
-  </div>
-</footer>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".nav-links");
 
+    if (toggle && navigation) {
+      toggle.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+      });
+
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Open navigation menu");
+        });
+      });
+    }
+  </script>
 </body>
 </html>
