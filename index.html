@@ -1063,7 +1063,7 @@
           <div class="button-row">
             <a
               class="btn btn-primary"
-              href="mailto:iterantsystems@gmail.com?subject=Project%20inquiry%20-%20Iterant%20Systems"
+              href="#contact"
             >
               Discuss a Project
             </a>
@@ -1426,22 +1426,140 @@
 
     <section id="contact">
       <div class="container">
-        <div class="contact-box">
-          <h2>Need a full hardware program—or help with one difficult subsystem?</h2>
-          <p>
-            Share the problem, current design stage, technical constraints, expected
-            deliverable, and timing. Iterant can help define the next practical engineering step.
-          </p>
-          <div class="button-row" style="justify-content: center;">
-            <a
-              class="btn btn-primary"
-              href="mailto:iterantsystems@gmail.com?subject=Project%20inquiry%20-%20Iterant%20Systems"
-            >
-              Email Iterant Systems
-            </a>
-          </div>
-          <div class="contact-details">
-            iterantsystems@gmail.com &nbsp;•&nbsp; Ottawa, Ontario, Canada
+        <div class="contact-box contact-box-form">
+          <div class="contact-form-layout">
+            <div class="contact-copy">
+              <div class="section-kicker">Discuss a project</div>
+              <h2>Tell us what you’re building.</h2>
+              <p>
+                Share the problem, current design stage, technical constraints,
+                expected deliverable, and timing. Iterant can help define the
+                next practical engineering step.
+              </p>
+
+              <div class="contact-direct">
+                <span>Prefer email?</span>
+                <a href="mailto:hello@iterant.ca">hello@iterant.ca</a>
+                <small>Ottawa, Ontario, Canada</small>
+              </div>
+
+              <p class="contact-privacy-note">
+                Please avoid sending confidential design files or sensitive IP in the
+                first message. If needed, an NDA can be arranged before detailed
+                technical information is exchanged.
+              </p>
+            </div>
+
+            <form id="iterant-contact-form" class="iterant-form" novalidate>
+              <div class="contact-form-grid">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="120"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="company">Company / Organization</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    autocomplete="organization"
+                    maxlength="160"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="service">What do you need help with? *</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="PCB Design">PCB Design</option>
+                    <option value="Embedded Systems">Embedded Systems</option>
+                    <option value="Firmware Development">Firmware Development</option>
+                    <option value="Prototype Assembly">Prototype Assembly</option>
+                    <option value="Testing / Debugging">Testing / Debugging</option>
+                    <option value="Scientific Instrumentation">Scientific Instrumentation</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group form-group-wide">
+                  <label for="timeline">Target timeline</label>
+                  <input
+                    type="text"
+                    id="timeline"
+                    name="timeline"
+                    maxlength="160"
+                    placeholder="e.g. Prototype needed within 8 weeks"
+                  />
+                </div>
+
+                <div class="form-group form-group-wide">
+                  <label for="message">Project brief *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    maxlength="10000"
+                    placeholder="Tell us what you are building, where the project currently stands, the main technical challenge, and what you would like Iterant to deliver."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-honeypot" aria-hidden="true">
+                  <label for="website">Website</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+
+              <label class="form-check" for="nda">
+                <input type="checkbox" id="nda" name="nda" />
+                <span>
+                  I’m open to signing an NDA before sharing sensitive technical information.
+                </span>
+              </label>
+
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  class="btn btn-primary form-submit"
+                  id="submitBtn"
+                >
+                  Send Project Inquiry
+                </button>
+                <span class="required-note">* Required fields</span>
+              </div>
+
+              <div
+                id="form-status"
+                class="form-status"
+                role="status"
+                aria-live="polite"
+              ></div>
+            </form>
           </div>
         </div>
       </div>
@@ -1596,7 +1714,7 @@
           );
         } finally {
           submitBtn.disabled = false;
-          submitBtn.textContent = "Discuss My Project";
+          submitBtn.textContent = "Send Project Inquiry";
         }
       });
     }
