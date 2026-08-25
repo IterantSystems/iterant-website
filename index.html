@@ -8,7 +8,7 @@
   <title>Iterant Systems | Electronics, Mechanical Design & Complete Hardware</title>
   <meta
     name="description"
-    content="Ottawa-based engineering company delivering complete hardware: precision electronics, embedded systems, custom PCBs, mechanical design, custom enclosures, rapid prototyping, and validation—from one difficult subsystem to a deployment-ready product."
+    content="Ottawa-based engineering company delivering complete hardware: precision electronics, embedded systems, custom PCBs, mechanical design, custom enclosures, rapid prototyping, and validation&mdash;from one difficult subsystem to a deployment-ready product."
   />
   <link rel="canonical" href="https://iterant.ca/" />
   <meta name="theme-color" content="#0b0f14" />
@@ -1029,7 +1029,199 @@
         transition-duration: 0.01ms !important;
       }
     }
-  </style>
+  
+
+    /* ITERANT EXPERIENCE GALLERY START */
+    .experience-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+    .experience-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .experience-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(94,162,255,.46);
+      box-shadow: 0 18px 45px rgba(0,0,0,.24);
+    }
+    .experience-card-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #fff;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .experience-card-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      transition: transform .28s ease;
+    }
+    .experience-card:hover .experience-card-image img { transform: scale(1.025); }
+    .experience-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: .65rem;
+      padding: 1.2rem;
+    }
+    .experience-card-label {
+      color: var(--accent-2);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .experience-card h3 { font-size: 1.06rem; line-height: 1.3; }
+    .experience-card p { color: var(--muted); font-size: .9rem; }
+    .experience-card-link {
+      margin-top: auto;
+      padding-top: .3rem;
+      color: var(--accent);
+      font-size: .86rem;
+      font-weight: 800;
+    }
+    .experience-card:hover .experience-card-link { color: var(--accent-2); }
+    .experience-disclaimer {
+      margin-top: 1.3rem;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+      font-size: .86rem;
+      padding-left: .9rem;
+    }
+    @media (max-width: 1000px) {
+      .experience-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 650px) {
+      .experience-gallery { grid-template-columns: 1fr; }
+    }
+    /* ITERANT EXPERIENCE GALLERY END */
+
+
+
+    /* ITERANT SITE REFINEMENT START */
+    .engagement-options {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1.15rem;
+    }
+    .engagement-item {
+      display: grid;
+      gap: 0.25rem;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 0.9rem;
+    }
+    .engagement-item:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .engagement-item strong {
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+    .engagement-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    .capability-grid .card {
+      min-height: 100%;
+    }
+    .capability-tag {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 0.85rem;
+      border: 1px solid rgba(119, 255, 216, 0.28);
+      border-radius: 999px;
+      background: rgba(119, 255, 216, 0.045);
+      color: var(--accent-2);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      line-height: 1;
+      padding: 0.42rem 0.62rem;
+      text-transform: uppercase;
+    }
+    .experience-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+    .experience-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      cursor: default;
+    }
+    .experience-card-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #fff;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .experience-card-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+    .experience-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 0.65rem;
+      padding: 1.2rem;
+    }
+    .experience-card-label {
+      color: var(--accent-2);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .experience-card h3 {
+      font-size: 1.06rem;
+      line-height: 1.3;
+    }
+    .experience-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .experience-card:hover {
+      transform: none;
+      border-color: var(--border);
+      box-shadow: none;
+    }
+    .experience-card:hover .experience-card-image img {
+      transform: none;
+    }
+    .experience-disclaimer {
+      max-width: 980px;
+      margin-top: 1.2rem;
+      color: var(--muted);
+      font-size: 0.79rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 1000px) {
+      .experience-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 650px) {
+      .experience-gallery { grid-template-columns: 1fr; }
+    }
+    /* ITERANT SITE REFINEMENT END */
+</style>
 </head>
 
 <body>
@@ -1072,11 +1264,11 @@
           <h1>Hardware,<br /><span>Evolved.</span></h1>
           <p class="hero-copy">
             Iterant Systems helps research groups, startups, and advanced product teams
-            design, build, integrate, and validate complete hardware—electronics,
+            design, build, integrate, and validate complete hardware&mdash;electronics,
             firmware, and the custom enclosures and mechanical structures that turn
             them into finished, deployment-ready products.
           </p>
-          <div class="engagement-note">Full programs, individual work packages—or the complete device, delivered as one</div>
+          <div class="engagement-note">Full programs, individual work packages&mdash;or the complete device, delivered as one</div>
           <div class="button-row">
             <a
               class="btn btn-primary"
@@ -1088,17 +1280,23 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Project delivery scope">
+        <aside class="hero-card" aria-label="Ways to engage Iterant">
           <div class="card-label">Flexible engagement</div>
-          <h2>What Iterant can own</h2>
-          <ol class="ownership-list">
-            <li><strong>01</strong><span>Requirements, feasibility, and system architecture</span></li>
-            <li><strong>02</strong><span>Electronics, PCB, embedded software, and integration</span></li>
-            <li><strong>03</strong><span>Mechanical design: enclosures, mounts, structures, and prototype parts</span></li>
-            <li><strong>04</strong><span>Sourcing, supplier selection, and manufacturing coordination</span></li>
-            <li><strong>05</strong><span>Bring-up, debugging, automated test, and validation</span></li>
-            <li><strong>06</strong><span>Deployment support, iteration, and small-batch transition</span></li>
-          </ol>
+          <h2>Engage at the level your program needs</h2>
+          <div class="engagement-options">
+            <div class="engagement-item">
+              <strong>Complete Hardware Program</strong>
+              <span>Coordinated electronics, embedded software, mechanical integration, realization, and validation.</span>
+            </div>
+            <div class="engagement-item">
+              <strong>Focused Subsystem</strong>
+              <span>A PCB, controller, enclosure, interface, test fixture, or difficult technical bottleneck.</span>
+            </div>
+            <div class="engagement-item">
+              <strong>Prototype &amp; Validation</strong>
+              <span>Bring-up, debugging, redesign, supplier coordination, and transition toward repeatable builds.</span>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
@@ -1107,19 +1305,17 @@
       <div class="container">
         <div class="section-heading">
           <div class="section-kicker">Capabilities</div>
-          <h2>Engineering support across the hardware lifecycle</h2>
+          <h2>Technical depth where hardware gets difficult</h2>
           <p>
-            Technical depth in precision electronics, embedded systems, and integrated
-            mechanical design, combined with the practical coordination needed to turn
-            designs into complete working hardware—boards, firmware, and the physical
-            product around them.
+            Precision electronics, embedded control, PCB design, realization, mechanical integration,
+            and validation&mdash;available as focused work packages or within a larger development program.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="grid capability-grid">
           <article class="card">
-            <div class="card-number">01</div>
-            <h3>Precision Analog & Mixed-Signal Electronics</h3>
+            <div class="capability-tag">Precision electronics</div>
+            <h3>Precision Analog &amp; Mixed-Signal Electronics</h3>
             <p>Low-noise circuits and precision measurement platforms for demanding environments.</p>
             <ul class="feature-list">
               <li>Ultra-stable current and bias systems</li>
@@ -1130,32 +1326,32 @@
           </article>
 
           <article class="card">
-            <div class="card-number">02</div>
-            <h3>Embedded Control & Linux Systems</h3>
-            <p>Real-time control, Linux compute, sensing, communications, and remote operation.</p>
+            <div class="capability-tag">Embedded systems</div>
+            <h3>Embedded Control, Linux &amp; Industrial Computing</h3>
+            <p>Real-time control and production-oriented embedded computing for connected hardware.</p>
             <ul class="feature-list">
               <li>Microcontroller firmware and supervisory control</li>
-              <li>Embedded Linux and compute modules</li>
-              <li>Camera, sensor, motor, and power integration</li>
-              <li>Telemetry, logging, and remote interfaces</li>
+              <li>Embedded Linux, SoMs, and production compute platforms</li>
+              <li>Camera, sensor, motor, power, and peripheral integration</li>
+              <li>Networking, telemetry, logging, and remote interfaces</li>
             </ul>
           </article>
 
           <article class="card">
-            <div class="card-number">03</div>
-            <h3>High-Speed PCB & Interface Design</h3>
+            <div class="capability-tag">PCB design</div>
+            <h3>High-Speed PCB &amp; Interface Design</h3>
             <p>Multi-layer boards and dense interfaces designed around signal integrity and manufacturability.</p>
             <ul class="feature-list">
               <li>Controlled impedance and differential routing</li>
               <li>High-density interconnect and mixed-signal layout</li>
               <li>SiPM, sensor, and high-channel-count readout</li>
-              <li>DFM review and fabrication data preparation</li>
+              <li>DFM review and fabrication-data preparation</li>
             </ul>
           </article>
 
           <article class="card">
-            <div class="card-number">04</div>
-            <h3>Prototype Realization & PCBA Coordination</h3>
+            <div class="capability-tag">Realization</div>
+            <h3>Prototype Realization &amp; PCBA Coordination</h3>
             <p>A single engineering interface from released design files through assembled prototypes.</p>
             <ul class="feature-list">
               <li>BOM review, sourcing, and alternates</li>
@@ -1166,37 +1362,20 @@
           </article>
 
           <article class="card">
-            <div class="card-number">05</div>
-            <h3>Mechanical Design, Enclosures & Rapid Prototyping</h3>
-            <p>
-              Custom housings, mounts, fixtures, and mechanical assemblies engineered
-              alongside the electronics, with specialist mechanical design and
-              rapid-prototyping capability integrated into Iterant-managed projects.
-            </p>
+            <div class="capability-tag">Mechanical integration</div>
+            <h3>Mechanical Design, Enclosures &amp; Rapid Prototyping</h3>
+            <p>Custom housings, mounts, fixtures, and mechanical assemblies engineered alongside the electronics.</p>
             <ul class="feature-list">
-              <li>3D CAD and solid modeling for enclosures, brackets, and structures</li>
-              <li>PCB-aware connector cutouts, standoffs, keep-outs, and cable routing</li>
-              <li>Fit, tolerance, thermal, strain-relief, and serviceability considerations</li>
+              <li>3D CAD and solid modeling for enclosures and brackets</li>
+              <li>PCB-aware cutouts, standoffs, keep-outs, and cable routing</li>
+              <li>Fit, tolerance, thermal, strain-relief, and serviceability review</li>
               <li>3D-printed prototype iteration and mechanical fit validation</li>
-              <li>Transition planning for CNC, sheet metal, molding, or production processes</li>
             </ul>
           </article>
 
           <article class="card">
-            <div class="card-number">06</div>
-            <h3>Industrial Computing & Product Integration</h3>
-            <p>Selection and integration of production-proven compute platforms into deployable products.</p>
-            <ul class="feature-list">
-              <li>x86-64 and ARM64 platform evaluation</li>
-              <li>Linux, storage, networking, and security requirements</li>
-              <li>Power, thermal, peripheral, and enclosure integration</li>
-              <li>Lifecycle, warranty, supplier, and support evaluation</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-number">07</div>
-            <h3>Bring-Up, Test Automation & Validation</h3>
+            <div class="capability-tag">Validation</div>
+            <h3>Bring-Up, Test Automation &amp; Validation</h3>
             <p>Structured verification that turns assembled hardware into a characterized system.</p>
             <ul class="feature-list">
               <li>Power sequencing and board bring-up</li>
@@ -1208,112 +1387,93 @@
         </div>
       </div>
     </section>
-
-    <section id="work">
+<section id="work">
       <div class="container">
         <div class="section-heading">
-          <div class="section-kicker">Representative experience & integrated delivery</div>
-          <h2>Complex hardware, presented at capability level</h2>
+          <div class="section-kicker">Representative engineering experience</div>
+          <h2>Hardware depth, shown in real systems</h2>
           <p>
-            Examples below reflect the engineering depth behind Iterant while keeping
-            project-specific identities, unpublished details, and collaboration-sensitive
-            information out of the public site. Where a project needs a complete physical
-            product, specialist mechanical design can be integrated into the same
-            Iterant-managed workflow.
+            Selected examples from prior professional engineering work demonstrating precision instrumentation,
+            high-density electronics, embedded control, detector interfaces, and integrated hardware.
           </p>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card">
-            <div>
-              <h3>Precision Control & Measurement Platforms</h3>
-              <p>
-                Multi-channel, ultra-stable electronics for precision current control,
-                low-noise measurement, magnetic systems, and scientific instrumentation.
-              </p>
+        <div class="experience-gallery">
+          <article class="experience-card">
+            <div class="experience-card-image">
+              <img src="assets/experience/precision-enclosure.webp" alt="Integrated multi-channel precision current instrumentation system" loading="lazy" />
             </div>
-            <ul class="feature-list">
-              <li>64-channel precision current architecture</li>
-              <li>Sub-ppm stability targets and characterization</li>
-              <li>Precision DAC and instrumentation-amplifier design</li>
-              <li>Low-current monitoring and high-current switching systems</li>
-            </ul>
+            <div class="experience-card-body">
+              <div class="experience-card-label">Precision instrumentation</div>
+              <h3>Precision Multi-Channel Instrumentation</h3>
+              <p>High-channel-count precision current control, power architecture, enclosure integration, and validation.</p>
+            </div>
           </article>
 
-          <article class="work-card">
-            <div>
-              <h3>Embedded Imaging & Instrumentation Control</h3>
-              <p>
-                Embedded compute and real-time control for remote cameras, sensors,
-                motion systems, power paths, and unattended instrumentation.
-              </p>
+          <article class="experience-card">
+            <div class="experience-card-image">
+              <img src="assets/experience/readout.webp" alt="High-density mixed-signal readout PCB" loading="lazy" />
             </div>
-            <ul class="feature-list">
-              <li>Linux compute with microcontroller supervision</li>
-              <li>Camera, motor, sensor, and power integration</li>
-              <li>Ethernet/PoE and remote operation</li>
-              <li>Telemetry, battery management, and endurance testing</li>
-            </ul>
+            <div class="experience-card-body">
+              <div class="experience-card-label">High-density electronics</div>
+              <h3>High-Density Readout Electronics</h3>
+              <p>Dense mixed-signal PCB architecture, channel integration, power distribution, and interface design.</p>
+            </div>
           </article>
 
-          <article class="work-card">
-            <div>
-              <h3>Detector, Sensor & High-Density Interfaces</h3>
-              <p>
-                Mixed-signal electronics and interconnect platforms for high-channel-count
-                sensing, precision biasing, and high-speed readout.
-              </p>
+          <article class="experience-card">
+            <div class="experience-card-image">
+              <img src="assets/experience/sensor-sipm.webp" alt="Detector amplifier and bias instrumentation enclosure" loading="lazy" />
             </div>
-            <ul class="feature-list">
-              <li>SiPM/MPPC amplifier and bias platforms</li>
-              <li>Low-noise analog front ends</li>
-              <li>High-density cable and connector integration</li>
-              <li>Controlled-impedance, differential, and multi-layer PCB systems</li>
-            </ul>
+            <div class="experience-card-body">
+              <div class="experience-card-label">Sensor electronics</div>
+              <h3>Low-Noise Detector &amp; Sensor Electronics</h3>
+              <p>Amplification, biasing, precision measurement, and detector-interface electronics for sensitive instrumentation.</p>
+            </div>
           </article>
 
-          <article class="work-card">
-            <div>
-              <h3>Automated Hardware Test & Validation Systems</h3>
-              <p>
-                Software-assisted test infrastructure for repeatable bring-up,
-                characterization, endurance testing, and engineering decisions.
-              </p>
+          <article class="experience-card">
+            <div class="experience-card-image">
+              <img src="assets/experience/camera-control.webp" alt="Embedded camera and power control PCB" loading="lazy" />
             </div>
-            <ul class="feature-list">
-              <li>Python control, telemetry, and structured test logs</li>
-              <li>Power-mode and battery-cycle validation</li>
-              <li>Test fixtures, acceptance criteria, and fault isolation</li>
-              <li>Data visualization and design-iteration support</li>
-            </ul>
+            <div class="experience-card-body">
+              <div class="experience-card-label">Embedded control</div>
+              <h3>Embedded Imaging &amp; Power Control</h3>
+              <p>Camera power switching, local supervision, sensing, motion interfaces, and multi-domain power management.</p>
+            </div>
           </article>
 
-          <article class="work-card">
-            <div>
-              <h3>Integrated Mechanical & Enclosure Delivery</h3>
-              <p>
-                For projects that need a complete physical product, Iterant can integrate
-                specialist mechanical design and rapid prototyping under the same project
-                scope, requirements, and system-integration workflow.
-              </p>
+          <article class="experience-card">
+            <div class="experience-card-image">
+              <img src="assets/experience/industrial-16ch.webp" alt="Multi-channel relay and contactor control enclosure" loading="lazy" />
             </div>
-            <ul class="feature-list">
-              <li>Custom enclosures, mounts, brackets, and structural parts</li>
-              <li>PCB-aware mechanical design and connector/interface coordination</li>
-              <li>Prototype print-fit-revise cycles and assembly checks</li>
-              <li>Fixtures and jigs for repeatable bring-up and validation</li>
-            </ul>
+            <div class="experience-card-body">
+              <div class="experience-card-label">Industrial control</div>
+              <h3>Relay &amp; Contactor Control Systems</h3>
+              <p>Control electronics, terminal distribution, multi-channel power switching, wiring, and enclosure integration.</p>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-card-image">
+              <img src="assets/experience/precision-analog.webp" alt="Precision analog voltage reference and current source electronics" loading="lazy" />
+            </div>
+            <div class="experience-card-body">
+              <div class="experience-card-label">Precision analog</div>
+              <h3>Precision Analog Electronics</h3>
+              <p>Stable references, current sources, measurement interfaces, and modular analog building blocks.</p>
+            </div>
           </article>
         </div>
 
-        <p class="discretion-note">
-          Specific project names, institutional affiliations, schematics, and photographs
-          are shared publicly only when permissions and IP boundaries are clear.
+        <p class="experience-disclaimer">
+          Representative prior engineering experience from the founder's professional roles and technical work;
+          not Iterant customer past performance. Project affiliations and intellectual property remain with the
+          applicable organizations where relevant.
         </p>
       </div>
     </section>
-
-    <section id="process">
+<section id="process">
       <div class="container">
         <div class="section-heading">
           <div class="section-kicker">Process</div>
@@ -1333,7 +1493,7 @@
           <article class="process-card">
             <div class="step">Step 02</div>
             <h3>Design</h3>
-            <p>Architecture, schematics, simulation, PCB layout, firmware, 3D CAD of enclosures and structures, and test planning—electronics and mechanics designed together.</p>
+            <p>Architecture, schematics, simulation, PCB layout, firmware, 3D CAD of enclosures and structures, and test planning&mdash;electronics and mechanics designed together.</p>
           </article>
           <article class="process-card">
             <div class="step">Step 03</div>
@@ -1353,7 +1513,7 @@
         </div>
 
         <div class="scope-banner">
-          Engage Iterant for the complete product—electronics and enclosure together—or
+          Engage Iterant for the complete product&mdash;electronics and enclosure together&mdash;or
           only the phase, subsystem, or technical bottleneck that needs extra engineering capacity.
         </div>
       </div>
@@ -1369,7 +1529,7 @@
         <div class="industry-grid">
           <article class="industry-card">
             <h3>Research & Scientific Instrumentation</h3>
-            <p>Custom electronics, controls, readout, test systems, and deployable research hardware—housed in purpose-built enclosures and fixtures.</p>
+            <p>Custom electronics, controls, readout, test systems, and deployable research hardware&mdash;housed in purpose-built enclosures and fixtures.</p>
           </article>
           <article class="industry-card">
             <h3>Hardware Startups & Product Teams</h3>
@@ -1407,7 +1567,7 @@
             <p>
               Iterant supports research groups, startups, and advanced product teams
               through individual engineering work packages or complete hardware
-              development programs—from requirements and system architecture through
+              development programs&mdash;from requirements and system architecture through
               electronics, mechanical integration, sourcing, prototype assembly,
               bring-up, characterization, and deployment.
             </p>
@@ -1429,7 +1589,7 @@
           <ul class="credibility-list">
             <li>
               <strong>Ottawa, Ontario</strong>
-              Located within Canada’s research, telecom, embedded-systems, and
+              Located within Canada&rsquo;s research, telecom, embedded-systems, and
               advanced-technology ecosystem.
             </li>
 
@@ -1469,7 +1629,7 @@
           <h2>Technology selected to fit the system</h2>
           <p>
             Platforms are chosen around performance, availability, lifecycle, integration,
-            and deployment—not around a fixed vendor stack.
+            and deployment&mdash;not around a fixed vendor stack.
           </p>
         </div>
 
@@ -1483,7 +1643,7 @@
           <span class="chip">ARM & x86 Embedded Compute</span>
           <span class="chip">Microcontrollers & SoMs</span>
           <span class="chip">Ethernet & PoE</span>
-          <span class="chip">USB, SPI, I²C & UART</span>
+          <span class="chip">USB, SPI, IÂ²C & UART</span>
           <span class="chip">Controlled Impedance</span>
           <span class="chip">Signal Integrity</span>
           <span class="chip">Precision Analog</span>
@@ -1509,7 +1669,7 @@
           <div class="contact-form-layout">
             <div class="contact-copy">
               <div class="section-kicker">Discuss a project</div>
-              <h2>Tell us what you’re building.</h2>
+              <h2>Tell us what you&rsquo;re building.</h2>
               <p>
                 Share the problem, current design stage, technical constraints,
                 expected deliverable, and timing. Whether it is a precision circuit,
@@ -1621,7 +1781,7 @@
               <label class="form-check" for="nda">
                 <input type="checkbox" id="nda" name="nda" />
                 <span>
-                  I’m open to signing an NDA before sharing sensitive technical information.
+                  I&rsquo;m open to signing an NDA before sharing sensitive technical information.
                 </span>
               </label>
 
@@ -1651,8 +1811,8 @@
 
   <footer>
     <div class="container footer-row">
-      <span>© 2026 Iterant Systems Inc.</span>
-      <span>Precision electronics • Embedded systems • Mechanical design & rapid prototyping • Hardware realization</span>
+      <span>&copy; 2026 Iterant Systems Inc.</span>
+      <span>Precision electronics &bull; Embedded systems &bull; Mechanical design & rapid prototyping &bull; Hardware realization</span>
       <a href="mailto:hello@iterant.ca">hello@iterant.ca</a>
     </div>
   </footer>
@@ -1759,9 +1919,9 @@
           nda: document.getElementById("nda").checked
         };
 
-        setStatus("Sending your inquiry…");
+        setStatus("Sending your inquiryâ€¦");
         submitBtn.disabled = true;
-        submitBtn.textContent = "Sending…";
+        submitBtn.textContent = "Sendingâ€¦";
 
         try {
           const response = await fetch(CONTACT_ENDPOINT, {
@@ -1786,13 +1946,13 @@
           contactForm.reset();
           requiredFields.forEach(clearFieldError);
           setStatus(
-            "Thanks — your inquiry has been received. We’ll get back to you shortly.",
+            "Thanks &mdash; your inquiry has been received. We&rsquo;ll get back to you shortly.",
             "success"
           );
         } catch (error) {
           console.error("Contact form error:", error);
           setStatus(
-            "We couldn’t send the form. Please email hello@iterant.ca instead.",
+            "We couldn&rsquo;t send the form. Please email hello@iterant.ca instead.",
             "error"
           );
         } finally {

@@ -1,0 +1,441 @@
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/index.html b/index.html[m
+[1mindex bc7e5a9..5f40466 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-<!DOCTYPE html>[m
+[32m+[m[32m﻿<!DOCTYPE html>[m
+ <html lang="en">[m
+ <head>[m
+   <meta charset="UTF-8" />[m
+[36m@@ -8,7 +8,7 @@[m
+   <title>Iterant Systems | Electronics, Mechanical Design & Complete Hardware</title>[m
+   <meta[m
+     name="description"[m
+[31m-    content="Ottawa-based engineering company delivering complete hardware: precision electronics, embedded systems, custom PCBs, mechanical design, custom enclosures, rapid prototyping, and validation—from one difficult subsystem to a deployment-ready product."[m
+[32m+[m[32m    content="Ottawa-based engineering company delivering complete hardware: precision electronics, embedded systems, custom PCBs, mechanical design, custom enclosures, rapid prototyping, and validationâ€”from one difficult subsystem to a deployment-ready product."[m
+   />[m
+   <link rel="canonical" href="https://iterant.ca/" />[m
+   <meta name="theme-color" content="#0b0f14" />[m
+[36m@@ -1029,7 +1029,83 @@[m
+         transition-duration: 0.01ms !important;[m
+       }[m
+     }[m
+[31m-  </style>[m
+[32m+[m[41m  [m
+[32m+[m
+[32m+[m[32m    /* ITERANT EXPERIENCE GALLERY START */[m
+[32m+[m[32m    .experience-gallery {[m
+[32m+[m[32m      display: grid;[m
+[32m+[m[32m      grid-template-columns: repeat(3, minmax(0, 1fr));[m
+[32m+[m[32m      gap: 1.1rem;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card {[m
+[32m+[m[32m      display: flex;[m
+[32m+[m[32m      min-width: 0;[m
+[32m+[m[32m      flex-direction: column;[m
+[32m+[m[32m      overflow: hidden;[m
+[32m+[m[32m      border: 1px solid var(--border);[m
+[32m+[m[32m      border-radius: 20px;[m
+[32m+[m[32m      background: var(--card);[m
+[32m+[m[32m      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card:hover {[m
+[32m+[m[32m      transform: translateY(-4px);[m
+[32m+[m[32m      border-color: rgba(94,162,255,.46);[m
+[32m+[m[32m      box-shadow: 0 18px 45px rgba(0,0,0,.24);[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card-image {[m
+[32m+[m[32m      aspect-ratio: 16 / 10;[m
+[32m+[m[32m      overflow: hidden;[m
+[32m+[m[32m      background: #fff;[m
+[32m+[m[32m      border-bottom: 1px solid var(--border-soft);[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card-image img {[m
+[32m+[m[32m      width: 100%;[m
+[32m+[m[32m      height: 100%;[m
+[32m+[m[32m      display: block;[m
+[32m+[m[32m      object-fit: contain;[m
+[32m+[m[32m      transition: transform .28s ease;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card:hover .experience-card-image img { transform: scale(1.025); }[m
+[32m+[m[32m    .experience-card-body {[m
+[32m+[m[32m      display: flex;[m
+[32m+[m[32m      flex: 1;[m
+[32m+[m[32m      flex-direction: column;[m
+[32m+[m[32m      gap: .65rem;[m
+[32m+[m[32m      padding: 1.2rem;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card-label {[m
+[32m+[m[32m      color: var(--accent-2);[m
+[32m+[m[32m      font-size: .72rem;[m
+[32m+[m[32m      font-weight: 800;[m
+[32m+[m[32m      letter-spacing: .1em;[m
+[32m+[m[32m      text-transform: uppercase;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card h3 { font-size: 1.06rem; line-height: 1.3; }[m
+[32m+[m[32m    .experience-card p { color: var(--muted); font-size: .9rem; }[m
+[32m+[m[32m    .experience-card-link {[m
+[32m+[m[32m      margin-top: auto;[m
+[32m+[m[32m      padding-top: .3rem;[m
+[32m+[m[32m      color: var(--accent);[m
+[32m+[m[32m      font-size: .86rem;[m
+[32m+[m[32m      font-weight: 800;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .experience-card:hover .experience-card-link { color: var(--accent-2); }[m
+[32m+[m[32m    .experience-disclaimer {[m
+[32m+[m[32m      margin-top: 1.3rem;[m
+[32m+[m[32m      border-left: 3px solid var(--accent);[m
+[32m+[m[32m      color: var(--muted);[m
+[32m+[m[32m      font-size: .86rem;[m
+[32m+[m[32m      padding-left: .9rem;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    @media (max-width: 1000px) {[m
+[32m+[m[32m      .experience-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }[m
+[32m+[m[32m    }[m
+[32m+[m[32m    @media (max-width: 650px) {[m
+[32m+[m[32m      .experience-gallery { grid-template-columns: 1fr; }[m
+[32m+[m[32m    }[m
+[32m+[m[32m    /* ITERANT EXPERIENCE GALLERY END */[m
+[32m+[m
+[32m+[m[32m</style>[m
+ </head>[m
+ [m
+ <body>[m
+[36m@@ -1072,11 +1148,11 @@[m
+           <h1>Hardware,<br /><span>Evolved.</span></h1>[m
+           <p class="hero-copy">[m
+             Iterant Systems helps research groups, startups, and advanced product teams[m
+[31m-            design, build, integrate, and validate complete hardware—electronics,[m
+[32m+[m[32m            design, build, integrate, and validate complete hardwareâ€”electronics,[m
+             firmware, and the custom enclosures and mechanical structures that turn[m
+             them into finished, deployment-ready products.[m
+           </p>[m
+[31m-          <div class="engagement-note">Full programs, individual work packages—or the complete device, delivered as one</div>[m
+[32m+[m[32m          <div class="engagement-note">Full programs, individual work packagesâ€”or the complete device, delivered as one</div>[m
+           <div class="button-row">[m
+             <a[m
+               class="btn btn-primary"[m
+[36m@@ -1111,7 +1187,7 @@[m
+           <p>[m
+             Technical depth in precision electronics, embedded systems, and integrated[m
+             mechanical design, combined with the practical coordination needed to turn[m
+[31m-            designs into complete working hardware—boards, firmware, and the physical[m
+[32m+[m[32m            designs into complete working hardwareâ€”boards, firmware, and the physical[m
+             product around them.[m
+           </p>[m
+         </div>[m
+[36m@@ -1209,110 +1285,103 @@[m
+       </div>[m
+     </section>[m
+ [m
+[32m+[m[41m    [m
+     <section id="work">[m
+       <div class="container">[m
+         <div class="section-heading">[m
+[31m-          <div class="section-kicker">Representative experience & integrated delivery</div>[m
+[31m-          <h2>Complex hardware, presented at capability level</h2>[m
+[32m+[m[32m          <div class="section-kicker">Representative engineering experience</div>[m
+[32m+[m[32m          <h2>Selected hardware across precision, embedded, sensor, and control systems</h2>[m
+           <p>[m
+[31m-            Examples below reflect the engineering depth behind Iterant while keeping[m
+[31m-            project-specific identities, unpublished details, and collaboration-sensitive[m
+[31m-            information out of the public site. Where a project needs a complete physical[m
+[31m-            product, specialist mechanical design can be integrated into the same[m
+[31m-            Iterant-managed workflow.[m
+[32m+[m[32m            Visual examples of the engineering depth behind Iterant, presented at capability level.[m
+[32m+[m[32m            Select a card for a concise case study showing the technical challenge, engineering scope,[m
+[32m+[m[32m            and capabilities demonstrated.[m
+           </p>[m
+         </div>[m
+ [m
+[31m-        <div class="work-grid">[m
+[31m-          <article class="work-card">[m
+[31m-            <div>[m
+[31m-              <h3>Precision Control & Measurement Platforms</h3>[m
+[31m-              <p>[m
+[31m-                Multi-channel, ultra-stable electronics for precision current control,[m
+[31m-                low-noise measurement, magnetic systems, and scientific instrumentation.[m
+[31m-              </p>[m
+[32m+[m[32m        <div class="experience-gallery">[m
+[32m+[m[32m          <a class="experience-card" href="case-studies/precision-instrumentation.html">[m
+[32m+[m[32m            <div class="experience-card-image">[m
+[32m+[m[32m              <img src="assets/experience/precision-enclosure.webp" alt="Integrated multi-channel precision current instrumentation system" loading="lazy" />[m
+             </div>[m
+[31m-            <ul class="feature-list">[m
+[31m-              <li>64-channel precision current architecture</li>[m
+[31m-              <li>Sub-ppm stability targets and characterization</li>[m
+[31m-              <li>Precision DAC and instrumentation-amplifier design</li>[m
+[31m-              <li>Low-current monitoring and high-current switching systems</li>[m
+[31m-            </ul>[m
+[31m-          </article>[m
+[32m+[m[32m            <div class="experience-card-body">[m
+[32m+[m[32m              <div class="experience-card-label">Precision instrumentation</div>[m
+[32m+[m[32m              <h3>Precision Multi-Channel Instrumentation</h3>[m
+[32m+[m[32m              <p>High-channel-count precision current control, power architecture, enclosure integration, and validation.</p>[m
+[32m+[m[32m              <span class="experience-card-link">View case study â†’</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </a>[m
+ [m
+[31m-          <article class="work-card">[m
+[31m-            <div>[m
+[31m-              <h3>Embedded Imaging & Instrumentation Control</h3>[m
+[31m-              <p>[m
+[31m-                Embedded compute and real-time control for remote cameras, sensors,[m
+[31m-                motion systems, power paths, and unattended instrumentation.[m
+[31m-              </p>[m
+[32m+[m[32m          <a class="experience-card" href="case-studies/detector-sensor-electronics.html">[m
+[32m+[m[32m            <div class="experience-card-image">[m
+[32m+[m[32m              <img src="assets/experience/readout.webp" alt="High-density mixed-signal readout PCB" loading="lazy" />[m
+             </div>[m
+[31m-            <ul class="feature-list">[m
+[31m-              <li>Linux compute with microcontroller supervision</li>[m
+[31m-              <li>Camera, motor, sensor, and power integration</li>[m
+[31m-              <li>Ethernet/PoE and remote operation</li>[m
+[31m-              <li>Telemetry, battery management, and endurance testing</li>[m
+[31m-            </ul>[m
+[31m-          </article>[m
+[32m+[m[32m            <div class="experience-card-body">[m
+[32m+[m[32m              <div class="experience-card-label">High-density electronics</div>[m
+[32m+[m[32m              <h3>High-Density Readout Electronics</h3>[m
+[32m+[m[32m              <p>Dense mixed-signal PCB architecture, channel integration, power distribution, and interface design.</p>[m
+[32m+[m[32m              <span class="experience-card-link">View case study â†’</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </a>[m
+ [m
+[31m-          <article class="work-card">[m
+[31m-            <div>[m
+[31m-              <h3>Detector, Sensor & High-Density Interfaces</h3>[m
+[31m-              <p>[m
+[31m-                Mixed-signal electronics and interconnect platforms for high-channel-count[m
+[31m-                sensing, precision biasing, and high-speed readout.[m
+[31m-              </p>[m
+[32m+[m[32m          <a class="experience-card" href="case-studies/detector-sensor-electronics.html">[m
+[32m+[m[32m            <div class="experience-card-image">[m
+[32m+[m[32m              <img src="assets/experience/sensor-sipm.webp" alt="Detector amplifier and bias instrumentation enclosure" loading="lazy" />[m
+             </div>[m
+[31m-            <ul class="feature-list">[m
+[31m-              <li>SiPM/MPPC amplifier and bias platforms</li>[m
+[31m-              <li>Low-noise analog front ends</li>[m
+[31m-              <li>High-density cable and connector integration</li>[m
+[31m-              <li>Controlled-impedance, differential, and multi-layer PCB systems</li>[m
+[31m-            </ul>[m
+[31m-          </article>[m
+[32m+[m[32m            <div class="experience-card-body">[m
+[32m+[m[32m              <div class="experience-card-label">Sensor electronics</div>[m
+[32m+[m[32m              <h3>Low-Noise Detector & Sensor Electronics</h3>[m
+[32m+[m[32m              <p>Amplification, biasing, precision measurement, and detector-interface electronics for sensitive instrumentation.</p>[m
+[32m+[m[32m              <span class="experience-card-link">View case study â†’</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </a>[m
+ [m
+[31m-          <article class="work-card">[m
+[31m-            <div>[m
+[31m-              <h3>Automated Hardware Test & Validation Systems</h3>[m
+[31m-              <p>[m
+[31m-                Software-assisted test infrastructure for repeatable bring-up,[m
+[31m-                characterization, endurance testing, and engineering decisions.[m
+[31m-              </p>[m
+[32m+[m[32m          <a class="experience-card" href="case-studies/embedded-imaging-control.html">[m
+[32m+[m[32m            <div class="experience-card-image">[m
+[32m+[m[32m              <img src="assets/experience/camera-control.webp" alt="Embedded camera and power control PCB" loading="lazy" />[m
+             </div>[m
+[31m-            <ul class="feature-list">[m
+[31m-              <li>Python control, telemetry, and structured test logs</li>[m
+[31m-              <li>Power-mode and battery-cycle validation</li>[m
+[31m-              <li>Test fixtures, acceptance criteria, and fault isolation</li>[m
+[31m-              <li>Data visualization and design-iteration support</li>[m
+[31m-            </ul>[m
+[31m-          </article>[m
+[32m+[m[32m            <div class="experience-card-body">[m
+[32m+[m[32m              <div class="experience-card-label">Embedded control</div>[m
+[32m+[m[32m              <h3>Embedded Imaging & Power Control</h3>[m
+[32m+[m[32m              <p>Camera power switching, local supervision, sensing, motion interfaces, and multi-domain power management.</p>[m
+[32m+[m[32m              <span class="experience-card-link">View case study â†’</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </a>[m
+ [m
+[31m-          <article class="work-card">[m
+[31m-            <div>[m
+[31m-              <h3>Integrated Mechanical & Enclosure Delivery</h3>[m
+[31m-              <p>[m
+[31m-                For projects that need a complete physical product, Iterant can integrate[m
+[31m-                specialist mechanical design and rapid prototyping under the same project[m
+[31m-                scope, requirements, and system-integration workflow.[m
+[31m-              </p>[m
+[32m+[m[32m          <a class="experience-card" href="case-studies/industrial-control-systems.html">[m
+[32m+[m[32m            <div class="experience-card-image">[m
+[32m+[m[32m              <img src="assets/experience/industrial-16ch.webp" alt="Multi-channel relay and contactor control enclosure" loading="lazy" />[m
+             </div>[m
+[31m-            <ul class="feature-list">[m
+[31m-              <li>Custom enclosures, mounts, brackets, and structural parts</li>[m
+[31m-              <li>PCB-aware mechanical design and connector/interface coordination</li>[m
+[31m-              <li>Prototype print-fit-revise cycles and assembly checks</li>[m
+[31m-              <li>Fixtures and jigs for repeatable bring-up and validation</li>[m
+[31m-            </ul>[m
+[31m-          </article>[m
+[32m+[m[32m            <div class="experience-card-body">[m
+[32m+[m[32m              <div class="experience-card-label">Industrial control</div>[m
+[32m+[m[32m              <h3>Relay & Contactor Control Systems</h3>[m
+[32m+[m[32m              <p>Control electronics, terminal distribution, multi-channel power switching, wiring, and enclosure-level integration.</p>[m
+[32m+[m[32m              <span class="experience-card-link">View case study â†’</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </a>[m
+[32m+[m
+[32m+[m[32m          <a class="experience-card" href="case-studies/precision-instrumentation.html">[m
+[32m+[m[32m            <div class="experience-card-image">[m
+[32m+[m[32m              <img src="assets/experience/precision-analog.webp" alt="Precision analog voltage reference and current source electronics" loading="lazy" />[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div class="experience-card-body">[m
+[32m+[m[32m              <div class="experience-card-label">Precision analog</div>[m
+[32m+[m[32m              <h3>Precision Analog Electronics</h3>[m
+[32m+[m[32m              <p>Stable references, current sources, measurement interfaces, and modular analog building blocks.</p>[m
+[32m+[m[32m              <span class="experience-card-link">View case study â†’</span>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m          </a>[m
+         </div>[m
+ [m
+[31m-        <p class="discretion-note">[m
+[31m-          Specific project names, institutional affiliations, schematics, and photographs[m
+[31m-          are shared publicly only when permissions and IP boundaries are clear.[m
+[32m+[m[32m        <p class="experience-disclaimer">[m
+[32m+[m[32m          These examples are representative prior engineering experience from the founderâ€™s professional roles[m
+[32m+[m[32m          and technical work; they are not represented as Iterant customer past performance. Confirm public-use[m
+[32m+[m[32m          permission for each image before publishing. Project affiliations and IP remain with the applicable[m
+[32m+[m[32m          organizations where relevant.[m
+         </p>[m
+       </div>[m
+     </section>[m
+ [m
+[32m+[m
+     <section id="process">[m
+       <div class="container">[m
+         <div class="section-heading">[m
+[36m@@ -1333,7 +1402,7 @@[m
+           <article class="process-card">[m
+             <div class="step">Step 02</div>[m
+             <h3>Design</h3>[m
+[31m-            <p>Architecture, schematics, simulation, PCB layout, firmware, 3D CAD of enclosures and structures, and test planning—electronics and mechanics designed together.</p>[m
+[32m+[m[32m            <p>Architecture, schematics, simulation, PCB layout, firmware, 3D CAD of enclosures and structures, and test planningâ€”electronics and mechanics designed together.</p>[m
+           </article>[m
+           <article class="process-card">[m
+             <div class="step">Step 03</div>[m
+[36m@@ -1353,7 +1422,7 @@[m
+         </div>[m
+ [m
+         <div class="scope-banner">[m
+[31m-          Engage Iterant for the complete product—electronics and enclosure together—or[m
+[32m+[m[32m          Engage Iterant for the complete productâ€”electronics and enclosure togetherâ€”or[m
+           only the phase, subsystem, or technical bottleneck that needs extra engineering capacity.[m
+         </div>[m
+       </div>[m
+[36m@@ -1369,7 +1438,7 @@[m
+         <div class="industry-grid">[m
+           <article class="industry-card">[m
+             <h3>Research & Scientific Instrumentation</h3>[m
+[31m-            <p>Custom electronics, controls, readout, test systems, and deployable research hardware—housed in purpose-built enclosures and fixtures.</p>[m
+[32m+[m[32m            <p>Custom electronics, controls, readout, test systems, and deployable research hardwareâ€”housed in purpose-built enclosures and fixtures.</p>[m
+           </article>[m
+           <article class="industry-card">[m
+             <h3>Hardware Startups & Product Teams</h3>[m
+[36m@@ -1407,7 +1476,7 @@[m
+             <p>[m
+               Iterant supports research groups, startups, and advanced product teams[m
+               through individual engineering work packages or complete hardware[m
+[31m-              development programs—from requirements and system architecture through[m
+[32m+[m[32m              development programsâ€”from requirements and system architecture through[m
+               electronics, mechanical integration, sourcing, prototype assembly,[m
+               bring-up, characterization, and deployment.[m
+             </p>[m
+[36m@@ -1429,7 +1498,7 @@[m
+           <ul class="credibility-list">[m
+             <li>[m
+               <strong>Ottawa, Ontario</strong>[m
+[31m-              Located within Canada’s research, telecom, embedded-systems, and[m
+[32m+[m[32m              Located within Canadaâ€™s research, telecom, embedded-systems, and[m
+               advanced-technology ecosystem.[m
+             </li>[m
+ [m
+[36m@@ -1469,7 +1538,7 @@[m
+           <h2>Technology selected to fit the system</h2>[m
+           <p>[m
+             Platforms are chosen around performance, availability, lifecycle, integration,[m
+[31m-            and deployment—not around a fixed vendor stack.[m
+[32m+[m[32m            and deploymentâ€”not around a fixed vendor stack.[m
+           </p>[m
+         </div>[m
+ [m
+[36m@@ -1483,7 +1552,7 @@[m
+           <span class="chip">ARM & x86 Embedded Compute</span>[m
+           <span class="chip">Microcontrollers & SoMs</span>[m
+           <span class="chip">Ethernet & PoE</span>[m
+[31m-          <span class="chip">USB, SPI, I²C & UART</span>[m
+[32m+[m[32m          <span class="chip">USB, SPI, IÂ²C & UART</span>[m
+           <span class="chip">Controlled Impedance</span>[m
+           <span class="chip">Signal Integrity</span>[m
+           <span class="chip">Precision Analog</span>[m
+[36m@@ -1509,7 +1578,7 @@[m
+           <div class="contact-form-layout">[m
+             <div class="contact-copy">[m
+               <div class="section-kicker">Discuss a project</div>[m
+[31m-              <h2>Tell us what you’re building.</h2>[m
+[32m+[m[32m              <h2>Tell us what youâ€™re building.</h2>[m
+               <p>[m
+                 Share the problem, current design stage, technical constraints,[m
+                 expected deliverable, and timing. Whether it is a precision circuit,[m
+[36m@@ -1621,7 +1690,7 @@[m
+               <label class="form-check" for="nda">[m
+                 <input type="checkbox" id="nda" name="nda" />[m
+                 <span>[m
+[31m-                  I’m open to signing an NDA before sharing sensitive technical information.[m
+[32m+[m[32m                  Iâ€™m open to signing an NDA before sharing sensitive technical information.[m
+                 </span>[m
+               </label>[m
+ [m
+[36m@@ -1651,8 +1720,8 @@[m
+ [m
+   <footer>[m
+     <div class="container footer-row">[m
+[31m-      <span>© 2026 Iterant Systems Inc.</span>[m
+[31m-      <span>Precision electronics • Embedded systems • Mechanical design & rapid prototyping • Hardware realization</span>[m
+[32m+[m[32m      <span>Â© 2026 Iterant Systems Inc.</span>[m
+[32m+[m[32m      <span>Precision electronics â€¢ Embedded systems â€¢ Mechanical design & rapid prototyping â€¢ Hardware realization</span>[m
+       <a href="mailto:hello@iterant.ca">hello@iterant.ca</a>[m
+     </div>[m
+   </footer>[m
+[36m@@ -1759,9 +1828,9 @@[m
+           nda: document.getElementById("nda").checked[m
+         };[m
+ [m
+[31m-        setStatus("Sending your inquiry…");[m
+[32m+[m[32m        setStatus("Sending your inquiryâ€¦");[m
+         submitBtn.disabled = true;[m
+[31m-        submitBtn.textContent = "Sending…";[m
+[32m+[m[32m        submitBtn.textContent = "Sendingâ€¦";[m
+ [m
+         try {[m
+           const response = await fetch(CONTACT_ENDPOINT, {[m
+[36m@@ -1786,13 +1855,13 @@[m
+           contactForm.reset();[m
+           requiredFields.forEach(clearFieldError);[m
+           setStatus([m
+[31m-            "Thanks — your inquiry has been received. We’ll get back to you shortly.",[m
+[32m+[m[32m            "Thanks â€” your inquiry has been received. Weâ€™ll get back to you shortly.",[m
+             "success"[m
+           );[m
+         } catch (error) {[m
+           console.error("Contact form error:", error);[m
+           setStatus([m
+[31m-            "We couldn’t send the form. Please email hello@iterant.ca instead.",[m
+[32m+[m[32m            "We couldnâ€™t send the form. Please email hello@iterant.ca instead.",[m
+             "error"[m
+           );[m
+         } finally {[m
+[36m@@ -1803,4 +1872,4 @@[m
+     }[m
+   </script>[m
+ </body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m[32m</html>[m
