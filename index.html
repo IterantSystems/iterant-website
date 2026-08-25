@@ -1946,13 +1946,13 @@
           contactForm.reset();
           requiredFields.forEach(clearFieldError);
           setStatus(
-            "Thanks &mdash; your inquiry has been received. We&rsquo;ll get back to you shortly.",
+            "Thanks - your inquiry has been received. We'll get back to you shortly.",
             "success"
           );
         } catch (error) {
           console.error("Contact form error:", error);
           setStatus(
-            "We couldn&rsquo;t send the form. Please email hello@iterant.ca instead.",
+            "We couldn't send the form. Please email hello@iterant.ca instead.",
             "error"
           );
         } finally {
