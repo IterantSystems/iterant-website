@@ -665,6 +665,216 @@
       font-size: 0.9rem;
     }
 
+
+    .contact-box-form {
+      text-align: left;
+    }
+
+    .contact-form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+
+    .contact-copy h2 {
+      margin-bottom: 1rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .contact-copy > p {
+      margin: 0;
+      color: #bdc8d8;
+    }
+
+    .contact-direct {
+      display: grid;
+      gap: 0.25rem;
+      margin-top: 1.6rem;
+      color: var(--muted);
+    }
+
+    .contact-direct span {
+      color: #dbe4f1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-direct a {
+      width: fit-content;
+      color: var(--accent-2);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .contact-direct a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .contact-direct small {
+      font-size: 0.85rem;
+    }
+
+    .contact-privacy-note {
+      margin-top: 1.6rem !important;
+      border-left: 2px solid rgba(94, 162, 255, 0.55);
+      color: var(--muted) !important;
+      font-size: 0.84rem;
+      padding-left: 0.85rem;
+    }
+
+    .iterant-form {
+      position: relative;
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      background: rgba(11, 15, 20, 0.38);
+      padding: clamp(1.25rem, 3vw, 1.7rem);
+    }
+
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: grid;
+      align-content: start;
+      gap: 0.5rem;
+    }
+
+    .form-group-wide {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #dbe4f1;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--text);
+      font: inherit;
+      padding: 0.82rem 0.9rem;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .form-group textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      color-scheme: dark;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #788596;
+    }
+
+    .form-group input:hover,
+    .form-group select:hover,
+    .form-group textarea:hover {
+      border-color: rgba(94, 162, 255, 0.42);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(94, 162, 255, 0.12);
+      outline: none;
+    }
+
+    .form-group input[aria-invalid="true"],
+    .form-group select[aria-invalid="true"],
+    .form-group textarea[aria-invalid="true"] {
+      border-color: #ff7b7b;
+    }
+
+    .form-honeypot {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      clip: rect(0 0 0 0) !important;
+      clip-path: inset(50%) !important;
+      white-space: nowrap !important;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+
+    .form-check input {
+      width: 17px;
+      height: 17px;
+      margin-top: 0.18rem;
+      accent-color: var(--accent);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9rem 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .form-submit {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .form-submit:disabled {
+      cursor: wait;
+      opacity: 0.68;
+      transform: none;
+    }
+
+    .required-note {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .form-status {
+      min-height: 1.5rem;
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .form-status-success {
+      color: var(--accent-2);
+    }
+
+    .form-status-error {
+      color: #ff9b9b;
+    }
+
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.055);
       color: var(--muted);
@@ -736,6 +946,10 @@
         border: 0;
       }
 
+      .contact-form-layout {
+        grid-template-columns: 1fr;
+      }
+
       .hero {
         min-height: auto;
         padding-block: 5.2rem;
@@ -759,6 +973,14 @@
 
       h1 {
         font-size: clamp(3rem, 15vw, 4.5rem);
+      }
+
+      .contact-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group-wide {
+        grid-column: auto;
       }
 
       .grid,
@@ -841,7 +1063,7 @@
           <div class="button-row">
             <a
               class="btn btn-primary"
-              href="mailto:hello@iterant.ca?subject=Project%20inquiry%20-%20Iterant%20Systems"
+              href="mailto:iterantsystems@gmail.com?subject=Project%20inquiry%20-%20Iterant%20Systems"
             >
               Discuss a Project
             </a>
@@ -1213,13 +1435,13 @@
           <div class="button-row" style="justify-content: center;">
             <a
               class="btn btn-primary"
-              href="mailto:hello@iterant.ca?subject=Project%20inquiry%20-%20Iterant%20Systems"
+              href="mailto:iterantsystems@gmail.com?subject=Project%20inquiry%20-%20Iterant%20Systems"
             >
               Email Iterant Systems
             </a>
           </div>
           <div class="contact-details">
-            hello@iterant.ca &nbsp;•&nbsp; Ottawa, Ontario, Canada
+            iterantsystems@gmail.com &nbsp;•&nbsp; Ottawa, Ontario, Canada
           </div>
         </div>
       </div>
@@ -1254,6 +1476,128 @@
           toggle.setAttribute("aria-expanded", "false");
           toggle.setAttribute("aria-label", "Open navigation menu");
         });
+      });
+    }
+
+    /*
+      IMPORTANT:
+      Replace the placeholder below with the HTTPS URL returned after deploying
+      the Cloudflare Worker, for example:
+      https://iterant-contact.<your-subdomain>.workers.dev
+    */
+    const CONTACT_ENDPOINT =
+      "https://iterant-contact.iterant-systems.workers.dev";
+
+    const contactForm = document.getElementById("iterant-contact-form");
+
+    if (contactForm) {
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submitBtn");
+      const requiredFields = Array.from(
+        contactForm.querySelectorAll("[required]")
+      );
+
+      const setStatus = (message, type = "") => {
+        status.textContent = message;
+        status.classList.remove("form-status-success", "form-status-error");
+
+        if (type === "success") {
+          status.classList.add("form-status-success");
+        }
+
+        if (type === "error") {
+          status.classList.add("form-status-error");
+        }
+      };
+
+      const clearFieldError = (field) => {
+        field.removeAttribute("aria-invalid");
+      };
+
+      requiredFields.forEach((field) => {
+        field.addEventListener("input", () => clearFieldError(field));
+        field.addEventListener("change", () => clearFieldError(field));
+      });
+
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        let firstInvalidField = null;
+
+        requiredFields.forEach((field) => {
+          if (!field.checkValidity()) {
+            field.setAttribute("aria-invalid", "true");
+            firstInvalidField ||= field;
+          } else {
+            clearFieldError(field);
+          }
+        });
+
+        if (firstInvalidField) {
+          setStatus("Please complete the required fields.", "error");
+          firstInvalidField.focus();
+          return;
+        }
+
+        if (CONTACT_ENDPOINT.includes("YOUR-CLOUDFLARE-SUBDOMAIN")) {
+          setStatus(
+            "The project form is not live yet. Please email hello@iterant.ca.",
+            "error"
+          );
+          return;
+        }
+
+        const payload = {
+          name: document.getElementById("name").value.trim(),
+          company: document.getElementById("company").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          service: document.getElementById("service").value,
+          timeline: document.getElementById("timeline").value.trim(),
+          website: document.getElementById("website").value.trim(),
+          message: document.getElementById("message").value.trim(),
+          nda: document.getElementById("nda").checked
+        };
+
+        setStatus("Sending your inquiry…");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+
+        try {
+          const response = await fetch(CONTACT_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
+
+          let data = {};
+          try {
+            data = await response.json();
+          } catch {
+            data = {};
+          }
+
+          if (!response.ok || !data.ok) {
+            throw new Error(data.error || "Unable to send your inquiry.");
+          }
+
+          contactForm.reset();
+          requiredFields.forEach(clearFieldError);
+          setStatus(
+            "Thanks — your inquiry has been received. We’ll get back to you shortly.",
+            "success"
+          );
+        } catch (error) {
+          console.error("Contact form error:", error);
+          setStatus(
+            "We couldn’t send the form. Please email hello@iterant.ca instead.",
+            "error"
+          );
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Discuss My Project";
+        }
       });
     }
   </script>
