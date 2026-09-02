@@ -1643,7 +1643,7 @@
           <span class="chip">ARM & x86 Embedded Compute</span>
           <span class="chip">Microcontrollers & SoMs</span>
           <span class="chip">Ethernet & PoE</span>
-          <span class="chip">USB, SPI, IÂ²C & UART</span>
+          <span class="chip">USB, SPI, I&sup2;C &amp; UART</span>
           <span class="chip">Controlled Impedance</span>
           <span class="chip">Signal Integrity</span>
           <span class="chip">Precision Analog</span>
@@ -1919,9 +1919,9 @@
           nda: document.getElementById("nda").checked
         };
 
-        setStatus("Sending your inquiryâ€¦");
+        setStatus("Sending your inquiry...");
         submitBtn.disabled = true;
-        submitBtn.textContent = "Sendingâ€¦";
+        submitBtn.textContent = "Sending...";
 
         try {
           const response = await fetch(CONTACT_ENDPOINT, {
